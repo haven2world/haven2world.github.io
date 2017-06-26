@@ -33,7 +33,7 @@
   "scripts": {
     "build": "atool-build",
     "lint": "eslint --ext .js,.jsx src/",
-    "start": "dora --plugins webpack --plugins webpack-hmr",
+    "start": "dora --plugins webpack webpack-hmr",
     "test": "atool-test-mocha ./**/__tests__/*-test.js"
   }
 }
