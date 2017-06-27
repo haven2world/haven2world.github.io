@@ -20,9 +20,9 @@ export default class Header extends React.Component{
   render(){
 
     return(
-      <div className="haven-header">
-
-      </div>
+        <div className="haven-header">
+                
+        </div>
       )
   }
 

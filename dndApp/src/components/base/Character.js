@@ -6,6 +6,7 @@ import {Row,Col} from 'antd'
 import { Menu, Icon, Breadcrumb ,Card ,Modal} from 'antd';
 import {Router, Route, Link, hashHistory,IndexRedirect } from 'react-router';
 import * as CharacterActions from '../../actions/Character';
+import CharacterSider from './Sider';
 
 
 const SubMenu = Menu.SubMenu;
@@ -23,9 +24,12 @@ class CharacterIndex extends Component{
   }
 
   render(){
+    console.log(this.props.children)
     return(
-      <div className="analysis" >
-        <p>123</p>
+      <div className="wrapper" >
+          <CharacterSider>
+              {this.props.children}
+          </CharacterSider>
       </div>
       )
   } 
