@@ -12,3 +12,38 @@
     background:#ffffff ;
     border-radius: 5px;
 }
+p.label{
+    font-size: 1.3rem;
+    text-align: right;
+    padding-right: 1rem;
+}
+.text{
+    font-size: 1.3rem !important;
+}
+
+.input{
+    font-size: 1rem !important;
+    height: 2.5rem !important;
+}
+.ant-select-selection{
+    font-size: 1rem !important;
+    height: 2.5rem !important;
+}
+.ant-select-selection__rendered{
+    line-height: 2.4rem!important;
+    height:  2.4rem!important;
+}
+.ant-select-dropdown-menu-item{
+    font-size: 1rem !important;
+    line-height: 0.4rem!important;
+    margin-top: 1rem!important;
+    margin-bottom: 1rem!important;
+    /*height: 2.5rem !important;*/
+}
+.littleInterval{
+    height: 0.5rem;
+}
+.ant-input-number-input{
+    line-height: 2.4rem!important;
+    height:  2.4rem!important;
+}

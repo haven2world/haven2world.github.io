@@ -18,13 +18,13 @@ class CharacterIndex extends Component{
   }
 
   componentDidMount() {
+    this.props.actions.fetchCharacter();
   }
 
   componentWillUnmount() {
   }
 
   render(){
-    console.log(this.props.children)
     return(
       <div className="wrapper" >
           <CharacterSider>

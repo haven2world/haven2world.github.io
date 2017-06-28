@@ -9,7 +9,10 @@ import init from '../utli/Init';
 import BaseData from '../components/base/BaseData';
 
 const storeInstance = store();
-init();
+if(!localStorage.initFlag){
+	init();
+
+}
 
 export default class App extends Component {
 	constructor(){
@@ -19,16 +22,16 @@ export default class App extends Component {
   render() {
 
 
-  		
+
 		return (
 			<Provider store={storeInstance}>
 				<div className="router">
 				  <Router history={hashHistory}>
 				  <Route name="Index" path="/" component={Indexdiv}  >
-				  		<IndexRedirect to="/character/baseData"/>
+						<IndexRedirect to="/character/baseData"/>
 						<Route name="character" path="character" component={character}>
-                            <Route name="baseData" path="baseData" component={BaseData}></Route>
-                        </Route>
+							<Route name="baseData" path="baseData" component={BaseData}></Route>
+						</Route>
 
 						<Route path="*" onEnter={errorToHome} />
 				  </Route>

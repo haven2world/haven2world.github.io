@@ -2,7 +2,8 @@
  * Created by Chen Haowen on 2017/6/28.
  */
 'use strict';
-export default data = [
+const data = [
+    null,
     '野蛮人',
     '吟游诗人',
     '牧师',
@@ -15,6 +16,8 @@ export default data = [
     '术士',
     '法师'
 ];
+export default data ;
+
 //'野蛮人',
 //'吟游诗人',
 //'牧师',

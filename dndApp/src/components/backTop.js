@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{Component} from 'react'
 import { BackTop,Icon } from 'antd';
 
 const style = {
@@ -12,7 +12,7 @@ const style = {
   fontSize: 20,
 };
 
-export default class BackToTop extends React.Component{
+export default class BackToTop extends Component{
   render(){
     return (
       <div>
