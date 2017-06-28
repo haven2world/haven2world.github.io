@@ -27,7 +27,6 @@ export function updateCharacter(key,value) {
     return dispatch => {
         dispatch(beginUpdateCharacter());
         localStorage[key] = value;
-        console.log(localStorage)
         dispatch(finishUpdateCharacter(key,value))
     }
 }

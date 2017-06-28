@@ -10,21 +10,25 @@ const style = {
 };
 
 export default class Stepper extends Component{
-    onChange(e){
-        this.props.onChange(e.target.value);
+    onChange(v){
+        this.props.onChange(v);
     }
     render(){
         return (
             <div>
                 <Row type="flex" align="middle">
                     <Col span={12}>
-                        <Input className="input"  type="number" onChange={(e)=>{this.onChange(e)} }
-                            {...this.props}  />
+                        <Input className="input"  type="number" onChange={(e)=>{this.onChange(e.target.value)} }
+                            value={this.props.value} />
                     </Col>
                     <Col span={2}/>
-                    <Col span={4}><Button type="primary" shpae="circle" icon="plus" size="large" onClick></Button></Col>
-                    <Col span={2}/>
-                    <Col span={4}><Button type="default" shpae="circle" icon="minus" size="large"></Button></Col>
+                    <Col span={10}>
+                        <Button type="primary"  icon="plus" size="large" onClick={()=>{this.onChange(parseInt(this.props.value)+1)}} ></Button>
+                        <Button type="default"  icon="minus" size="large" onClick={()=>{this.onChange(parseInt(this.props.value)-1)}}
+                                style={{marginLeft:'1rem',marginRight:'1rem'}}
+                        ></Button>
+                    </Col>
+
                 </Row>
             </div>
         );

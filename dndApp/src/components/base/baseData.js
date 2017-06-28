@@ -11,6 +11,7 @@ import { Menu, Icon, Breadcrumb ,Card ,Modal, Input,InputNumber,Form,Button,Sele
 import {Router, Route, Link, hashHistory,IndexRedirect } from 'react-router';
 import * as CharacterActions from '../../actions/Character';
 import roleData from '../../asset/role';
+import Stepper from '../common/Stepper';
 
 const Option = Select.Option;
 
@@ -99,8 +100,8 @@ class BaseData extends Component {
             renderRole = this.state.role.map((k,i)=>{
                 if(i==0){
                     return(
-                        <div>
-                            <Row key={i} type="flex" align="middle">
+                        <div key={i}>
+                            <Row  type="flex" align="middle">
                                 <Col span={4} >
                                     <p className="label">职业 </p>
                                 </Col>
@@ -114,6 +115,7 @@ class BaseData extends Component {
                                     </Select>
                                 </Col>
                                 <Col span={4} >
+                                    <Stepper></Stepper>
                                     <InputNumber  className="input"
                                                   min={1} max={20}
                                                   value={k.grade}
@@ -126,9 +128,9 @@ class BaseData extends Component {
                     )
                 }else{
                     return(
-                        <div>
+                        <div key={i}>
                             <div className="littleInterval"></div>
-                            <Row key={i} type="flex" align="middle">
+                            <Row  type="flex" align="middle">
                                 <Col span={4} ></Col>
                                 <Col span={2}></Col>
                                 <Col span={6} >
@@ -242,13 +244,8 @@ class BaseData extends Component {
                     <Col span={2} >
                         <p className="text">法师</p>
                     </Col>
-                    <Col span={2} >
-                        <InputNumber  className="input"
-                                      min={1} max={20}
-                                      value={dnd.str}
-                                      onChange={(v)=>{this.onChangeNum('str',v)}}
-
-                        />
+                    <Col span={8} >
+                       <Stepper value={dnd.str} onChange={(v)=>{this.onChangeNum('str',v)}}></Stepper>
                     </Col>
                 </Row>
             </div>
