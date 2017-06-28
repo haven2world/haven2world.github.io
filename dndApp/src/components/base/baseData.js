@@ -28,7 +28,7 @@ class BaseData extends Component {
 
     componentWillReceiveProps(nextProps) {
         let {dnd} = nextProps.character;
-        console.log(nextProps.character)
+
         let role = JSON.parse(dnd.role);
 
         this.setState({role});
@@ -58,7 +58,24 @@ class BaseData extends Component {
         this.setState({role});
         this.onChangeRole();
     }
-
+    onAddRole(){
+        let role = this.state.role;
+        let k = {
+            role:0,
+            grade:0
+        };
+        role.push(k);
+        this.state.role = role;
+        this.setState({role});
+        this.onChangeRole();
+    }
+    onDeleteRole(i){
+        let role = this.state.role;
+        role.splice(i,1)
+        this.state.role = role;
+        this.setState({role});
+        this.onChangeRole();
+    }
     onChangeRole(){
         let actions = this.props.actions;
         let v = JSON.stringify(this.state.role);
@@ -82,47 +99,57 @@ class BaseData extends Component {
             renderRole = this.state.role.map((k,i)=>{
                 if(i==0){
                     return(
-                        <Row key={i} type="flex" align="middle">
-                            <Col span={4} >
-                                <p className="label">职业 </p>
-                            </Col>
-                            <Col span={2}>
-                                <a className="text" onClick={()=>{}}><Icon type="plus" /></a>
-                            </Col>
-                            <Col span={6} >
-                                <Select className="input" defaultValue={k.role.toString()} style={{width:'100%'}}>
-                                    {roleOptions}
-                                </Select>
-                            </Col>
-                            <Col span={4} >
-                                <InputNumber  className="input"
-                                              min={1} max={20}
-                                              value={k.grade}
-                                              onChange={(v)=>{this.onChangeRoleGrade(i,v)}}
+                        <div>
+                            <Row key={i} type="flex" align="middle">
+                                <Col span={4} >
+                                    <p className="label">职业 </p>
+                                </Col>
+                                <Col span={2}>
+                                    <a className="text" onClick={()=>{this.onAddRole()}}><Icon type="plus" /></a>
+                                </Col>
+                                <Col span={6} >
+                                    <Select className="input" defaultValue={k.role.toString()} style={{width:'90%'}}
+                                            onSelect={(v,o)=>{this.onChangeRoleClass(i,parseInt(v))}}>
+                                        {roleOptions}
+                                    </Select>
+                                </Col>
+                                <Col span={4} >
+                                    <InputNumber  className="input"
+                                                  min={1} max={20}
+                                                  value={k.grade}
+                                                  onChange={(v)=>{this.onChangeRoleGrade(i,v)}}
 
-                                />
-                            </Col>
-                        </Row>
+                                    />
+                                </Col>
+                            </Row>
+                        </div>
                     )
                 }else{
                     return(
-                        <Row key={i} type="flex" align="middle">
-                            <Col span={4} ></Col>
-                            <Col span={2}></Col>
-                            <Col span={6} >
-                                <Select className="input" defaultValue={k.role.toString()} >
-                                    {roleOptions}
-                                </Select>
-                            </Col>
-                            <Col span={4} >
-                                <InputNumber  className="input"
-                                              min={1} max={20}
-                                              value={k.grade}
-                                              onChange={(v)=>{this.onChangeRoleGrade(i,v)}}
+                        <div>
+                            <div className="littleInterval"></div>
+                            <Row key={i} type="flex" align="middle">
+                                <Col span={4} ></Col>
+                                <Col span={2}></Col>
+                                <Col span={6} >
+                                    <Select className="input" defaultValue={k.role.toString()} style={{width:'90%'}}
+                                            onSelect={(v,o)=>{this.onChangeRoleClass(i,parseInt(v))}}>
+                                        {roleOptions}
+                                    </Select>
+                                </Col>
+                                <Col span={4} >
+                                    <InputNumber  className="input"
+                                                  min={1} max={20}
+                                                  value={k.grade}
+                                                  onChange={(v)=>{this.onChangeRoleGrade(i,v)}}
 
-                                />
-                            </Col>
-                        </Row>
+                                    />
+                                </Col>
+                                <Col span={2}>
+                                    <a className="text" onClick={()=>{this.onDeleteRole(i)}} style={{padding:'1rem'}}><Icon type="minus" /></a>
+                                </Col>
+                            </Row>
+                        </div>
                     )
                 }
             })
@@ -133,7 +160,7 @@ class BaseData extends Component {
                         <p className="label">职业 </p>
                     </Col>
                     <Col span={2}>
-                        <a className="text" onClick={()=>{}}><Icon type="plus" /></a>
+                        <a className="text" onClick={()=>{this.onAddRole()}}><Icon type="plus" /></a>
                     </Col>
                 </Row>
             );
@@ -153,12 +180,12 @@ class BaseData extends Component {
                                prefix={<Icon type="user" />}
                         />
                     </Col>
-                    <Col span={1} >
+                    <Col span={2} >
                     </Col>
                     <Col span={2} >
                         <p className="label">年龄</p>
                     </Col>
-                    <Col span={4} >
+                    <Col span={3} >
                         <Input size="large" placeholder="Age" className="input"
                                value={dnd.age}
                                onChange={(e)=>{this.onChangeText('age',e)}}
@@ -169,7 +196,7 @@ class BaseData extends Component {
                     <Col span={2} >
                         <p className="label">速度</p>
                     </Col>
-                    <Col span={4} >
+                    <Col span={3} >
                         <Input size="large" placeholder="Speed" className="input"
                                value={dnd.speed}
                                onChange={(e)=>{this.onChangeText('speed',e)}}
@@ -182,7 +209,28 @@ class BaseData extends Component {
                         {renderRole}
                     </Col>
                     <Col span={12}>
-
+                        <Row type="flex" align="middle">
+                            <Col span={4} >
+                                <p className="label">阵营</p>
+                            </Col>
+                            <Col span={6} >
+                                <Input size="large" className="input"
+                                       value={dnd.faction}
+                                       onChange={(e)=>{this.onChangeText('faction',e)}}
+                                />
+                            </Col>
+                            <Col span={2} >
+                            </Col>
+                            <Col span={4} >
+                                <p className="label">信仰</p>
+                            </Col>
+                            <Col span={6} >
+                                <Input size="large" className="input"
+                                       value={dnd.faith}
+                                       onChange={(e)=>{this.onChangeText('faith',e)}}
+                                />
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
 

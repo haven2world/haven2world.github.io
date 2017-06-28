@@ -3,26 +3,29 @@
  */
 'use strict';
 import React,{Component} from 'react'
-import { Button,Icon,InputNumber } from 'antd';
+import { Button,Icon,Input,Row,Col } from 'antd';
 
 const style = {
-    height: 40,
-    width: 40,
-    lineHeight: '40px',
-    borderRadius: 4,
-    backgroundColor: '#ff9757',
-    color: '#fff',
-    textAlign: 'center',
-    fontSize: 20,
+
 };
 
 export default class Stepper extends Component{
+    onChange(e){
+        this.props.onChange(e.target.value);
+    }
     render(){
         return (
             <div>
-                <BackTop style={{ bottom: 100 }}>
-                    <div style={style}><Icon type="up" /></div>
-                </BackTop>
+                <Row type="flex" align="middle">
+                    <Col span={12}>
+                        <Input className="input"  type="number" onChange={(e)=>{this.onChange(e)} }
+                            {...this.props}  />
+                    </Col>
+                    <Col span={2}/>
+                    <Col span={4}><Button type="primary" shpae="circle" icon="plus" size="large" onClick></Button></Col>
+                    <Col span={2}/>
+                    <Col span={4}><Button type="default" shpae="circle" icon="minus" size="large"></Button></Col>
+                </Row>
             </div>
         );
     }

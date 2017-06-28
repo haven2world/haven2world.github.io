@@ -9,7 +9,8 @@ export default function initLocalStorage () {
 	dnd.race = 1;
 	dnd.age = 18;
 	dnd.speed = 30;
-    dnd.faction = 1;
+    dnd.faction = '绝对善良';
+    dnd.faith = '博卡布';
 
 	dnd.str = 10;
 	dnd.dex = 10;

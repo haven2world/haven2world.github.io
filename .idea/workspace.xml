@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7ed9e5e-6c14-4610-ba48-7bfb05545562" name="默认" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dndApp/src/components/common/stepper.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/index.html" afterPath="$PROJECT_DIR$/dndApp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/actions/Character.js" afterPath="$PROJECT_DIR$/dndApp/src/actions/Character.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/asset/role.js" afterPath="$PROJECT_DIR$/dndApp/src/asset/role.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/components/backTop.js" afterPath="$PROJECT_DIR$/dndApp/src/components/backTop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/components/base/Character.js" afterPath="$PROJECT_DIR$/dndApp/src/components/base/Character.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/components/base/Sider.js" afterPath="$PROJECT_DIR$/dndApp/src/components/base/Sider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/constants/ActionTypes.js" afterPath="$PROJECT_DIR$/dndApp/src/constants/ActionTypes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/css/index.css" afterPath="$PROJECT_DIR$/dndApp/src/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/reducer/CharacterReducers.js" afterPath="$PROJECT_DIR$/dndApp/src/reducer/CharacterReducers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/router/App.js" afterPath="$PROJECT_DIR$/dndApp/src/router/App.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/utli/Init.js" afterPath="$PROJECT_DIR$/dndApp/src/utli/Init.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -46,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dndApp/src/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7285714">
-              <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+            <state vertical-scroll-proportion="-11.0">
+              <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -60,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Character.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -69,8 +58,18 @@
       <file leaf-file-name="BaseData.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/BaseData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="91" column="43" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
+            <state vertical-scroll-proportion="-10.566667">
+              <caret line="40" column="50" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Stepper.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dndApp/src/components/common/Stepper.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.547235">
+              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -120,7 +119,7 @@
         <entry file="file://$PROJECT_DIR$/dndApp/src/utli/Init.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -164,13 +163,14 @@
         <option value="$PROJECT_DIR$/dndApp/src/components/base/Character.js" />
         <option value="$PROJECT_DIR$/dndApp/src/constants/ActionTypes.js" />
         <option value="$PROJECT_DIR$/dndApp/src/reducer/CharacterReducers.js" />
-        <option value="$PROJECT_DIR$/dndApp/src/utli/Init.js" />
         <option value="$PROJECT_DIR$/dndApp/src/router/App.js" />
         <option value="$PROJECT_DIR$/dndApp/index.html" />
         <option value="$PROJECT_DIR$/dndApp/src/actions/Character.js" />
         <option value="$PROJECT_DIR$/dndApp/src/asset/role.js" />
-        <option value="$PROJECT_DIR$/dndApp/src/components/base/BaseData.js" />
         <option value="$PROJECT_DIR$/dndApp/src/css/index.css" />
+        <option value="$PROJECT_DIR$/dndApp/src/utli/Init.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/components/base/BaseData.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/components/common/Stepper.js" />
       </list>
     </option>
   </component>
@@ -769,14 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/components/common/Stepper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30609897">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dndApp/src/constants/ActionTypes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17491369">
@@ -809,14 +801,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/utli/Init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dndApp/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.045238096">
@@ -841,14 +825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Character.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dndApp/src/asset/role.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -857,18 +833,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/BaseData.js">
+    <entry file="file://$PROJECT_DIR$/dndApp/src/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="43" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
+        <state vertical-scroll-proportion="-11.0">
+          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/css/index.css">
+    <entry file="file://$PROJECT_DIR$/dndApp/src/utli/Init.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7285714">
-          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Character.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/BaseData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.566667">
+          <caret line="40" column="50" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/components/common/Stepper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.547235">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
           <folding />
         </state>
       </provider>
