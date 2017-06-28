@@ -3,6 +3,7 @@ export default function initLocalStorage () {
 	let dnd = {};
 
 	dnd.name = "狗蛋";
+	dnd.role = `[{"role":1,"grade":1}]`;
 	dnd.race = 1;
 	dnd.age = 18;
 	dnd.speed = 30;
