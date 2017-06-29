@@ -12,6 +12,7 @@ import {Router, Route, Link, hashHistory,IndexRedirect } from 'react-router';
 import * as CharacterActions from '../../actions/Character';
 import roleData from '../../asset/role';
 import Stepper from '../common/Stepper';
+import {getAttrAdjustValue} from '../../utli/Common';
 
 const Option = Select.Option;
 
@@ -82,7 +83,13 @@ class BaseData extends Component {
         let v = JSON.stringify(this.state.role);
         actions.updateCharacter('role',v);
     }
+    getAttrFinal(key,value){
 
+        return value;
+    }
+    handleUpGrade(){
+        this.onChangeNum('xp',0);
+    }
     render() {
         let {dnd} = this.props.character;
         let actions = this.props.actions;
@@ -114,14 +121,9 @@ class BaseData extends Component {
                                         {roleOptions}
                                     </Select>
                                 </Col>
-                                <Col span={4} >
-                                    <Stepper></Stepper>
-                                    <InputNumber  className="input"
-                                                  min={1} max={20}
-                                                  value={k.grade}
-                                                  onChange={(v)=>{this.onChangeRoleGrade(i,v)}}
-
-                                    />
+                                <Col span={10} >
+                                    <Stepper value={k.grade}
+                                             onChange={(v)=>{this.onChangeRoleGrade(i,v)}}></Stepper>
                                 </Col>
                             </Row>
                         </div>
@@ -132,24 +134,20 @@ class BaseData extends Component {
                             <div className="littleInterval"></div>
                             <Row  type="flex" align="middle">
                                 <Col span={4} ></Col>
-                                <Col span={2}></Col>
+                                <Col span={2}>
+                                    <a className="text" onClick={()=>{this.onDeleteRole(i)}} ><Icon type="minus" /></a>
+                                </Col>
                                 <Col span={6} >
                                     <Select className="input" defaultValue={k.role.toString()} style={{width:'90%'}}
                                             onSelect={(v,o)=>{this.onChangeRoleClass(i,parseInt(v))}}>
                                         {roleOptions}
                                     </Select>
                                 </Col>
-                                <Col span={4} >
-                                    <InputNumber  className="input"
-                                                  min={1} max={20}
-                                                  value={k.grade}
-                                                  onChange={(v)=>{this.onChangeRoleGrade(i,v)}}
+                                <Col span={10} >
+                                    <Stepper value={k.grade}
+                                             onChange={(v)=>{this.onChangeRoleGrade(i,v)}}></Stepper>
+                                </Col>
 
-                                    />
-                                </Col>
-                                <Col span={2}>
-                                    <a className="text" onClick={()=>{this.onDeleteRole(i)}} style={{padding:'1rem'}}><Icon type="minus" /></a>
-                                </Col>
                             </Row>
                         </div>
                     )
@@ -167,6 +165,59 @@ class BaseData extends Component {
                 </Row>
             );
         }
+
+        //render attribute
+        let renderAttr = (
+          <div>
+              <Row type="flex" align="middle">
+                  <Col span={4} >
+                      <p className="label">属性</p>
+                  </Col>
+                  <Col span={8} >
+                      <p className="label" style={{textAlign:'center'}}>属性值</p>
+                  </Col>
+                  <Col span={6} >
+                      <p className="label">最终值</p>
+                  </Col>
+                  <Col span={6} >
+                      <p className="label">调整值</p>
+                  </Col>
+              </Row>
+              <div className="littleInterval"></div>
+              {(()=>{
+                 let attrArr = [{key:'str',name:'力量'},
+                     {key:'dex',name:'敏捷'},
+                     {key:'con',name:'体质'},
+                     {key:'int',name:'智力'},
+                     {key:'wis',name:'感知'},
+                     {key:'cha',name:'魅力'}];
+                  let temp = attrArr.map((k,i)=>{
+                     return(
+                         <div key={i}>
+                             <Row  type="flex" align="middle">
+                                 <Col span={4} >
+                                     <p className="label">{k.name}</p>
+                                 </Col>
+                                 <Col span={10} >
+                                     <Stepper value={dnd[k.key]}
+                                              onChange={(v)=>{this.onChangeNum(k.key,v)}}></Stepper>
+                                 </Col>
+                                 <Col span={4} >
+                                     <p className="label">{this.getAttrFinal(k.key,dnd[k.key])}</p>
+                                 </Col>
+                                 <Col span={6} >
+                                     <p className="label">{getAttrAdjustValue(dnd[k.key])}</p>
+                                 </Col>
+                             </Row>
+                             <div className="littleInterval"></div>
+                         </div>
+                     )
+                  });
+                  return temp;
+              })()}
+          </div>
+        );
+
 
 
         return (
@@ -235,19 +286,28 @@ class BaseData extends Component {
                         </Row>
                     </Col>
                 </Row>
-
                 <div className="littleInterval"></div>
-                <Row type="flex" align="middle">
-                    <Col span={2} >
-                        <p className="label">职业</p>
+                <Row type="flex" align="start">
+                    <Col span={12}>
+                        {renderAttr}
                     </Col>
-                    <Col span={2} >
-                        <p className="text">法师</p>
-                    </Col>
-                    <Col span={8} >
-                       <Stepper value={dnd.str} onChange={(v)=>{this.onChangeNum('str',v)}}></Stepper>
+                    <Col span={12}>
+                        <Row type="flex" align="middle">
+                            <Col span={4} >
+                                <p className="label">经验</p>
+                            </Col>
+                            <Col span={10} >
+                                <Stepper value={dnd.xp}
+                                         onChange={(v)=>{this.onChangeNum('xp',v)}}></Stepper>
+                            </Col>
+                            <Col span={8} >
+                                <Button size="large" onClick={()=>{this.handleUpGrade()}} >升级</Button>
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
+
+
             </div>
 
         )

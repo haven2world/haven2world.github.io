@@ -27,7 +27,7 @@ class CharacterIndex extends Component{
   render(){
     return(
       <div className="wrapper" >
-          <CharacterSider>
+          <CharacterSider actions={this.props.actions}>
               {this.props.children}
           </CharacterSider>
       </div>

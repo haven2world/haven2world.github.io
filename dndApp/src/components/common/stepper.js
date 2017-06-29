@@ -17,12 +17,12 @@ export default class Stepper extends Component{
         return (
             <div>
                 <Row type="flex" align="middle">
-                    <Col span={12}>
+                    <Col span={8}>
                         <Input className="input"  type="number" onChange={(e)=>{this.onChange(e.target.value)} }
                             value={this.props.value} />
                     </Col>
                     <Col span={2}/>
-                    <Col span={10}>
+                    <Col span={14}>
                         <Button type="primary"  icon="plus" size="large" onClick={()=>{this.onChange(parseInt(this.props.value)+1)}} ></Button>
                         <Button type="default"  icon="minus" size="large" onClick={()=>{this.onChange(parseInt(this.props.value)-1)}}
                                 style={{marginLeft:'1rem',marginRight:'1rem'}}

@@ -11,6 +11,10 @@ export default function initLocalStorage () {
 	dnd.speed = 30;
     dnd.faction = '绝对善良';
     dnd.faith = '博卡布';
+	dnd.xp = 0;
+	dnd.hp = 8;
+	dnd.ac = 10;
+
 
 	dnd.str = 10;
 	dnd.dex = 10;

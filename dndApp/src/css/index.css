@@ -1,6 +1,11 @@
 .wrapper{
     min-height: 100%;
-
+}
+.router{
+    height: 100%!important;
+}
+.index{
+    height: 100%!important;
 }
 .ant-layout-sider-zero-width-trigger{
     opacity:0.5;
