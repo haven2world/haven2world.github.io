@@ -21,6 +21,9 @@ class BaseData extends Component {
         super();
         this.state = {
             role:[],
+            xpModal:false,
+            getXp:0,
+            weaponList:[]
         }
     }
 
@@ -32,8 +35,9 @@ class BaseData extends Component {
         let {dnd} = nextProps.character;
 
         let role = JSON.parse(dnd.role);
+        let weaponList = JSON.parse(dnd.weaponList);
 
-        this.setState({role});
+        this.setState({role,weaponList});
     }
     componentWillUnmount() {
     }
@@ -83,12 +87,47 @@ class BaseData extends Component {
         let v = JSON.stringify(this.state.role);
         actions.updateCharacter('role',v);
     }
+    onChangeWeaponList(){
+        let actions = this.props.actions;
+        let v = JSON.stringify(this.state.weaponList);
+        actions.updateCharacter('weaponList',v);
+    }
+    onChangeWeaponItem(i,key,value){
+        let weaponList = this.state.weaponList;
+        weaponList[i][key] = value;
+        this.state.weaponList = weaponList;
+        this.setState({weaponList});
+        this.onChangeWeaponList();
+    }
     getAttrFinal(key,value){
 
         return value;
     }
     handleUpGrade(){
         this.onChangeNum('xp',0);
+    }
+    handleGetXp(){
+        this.setState({xpModal:true});
+    }
+    renderXpModal(){
+        let {dnd} = this.props.character;
+        let handleOk = ()=>{
+            this.onChangeNum('xp',parseInt( dnd.xp) + parseInt(this.state.getXp));
+            this.setState({getXp:0,xpModal:false});
+        };
+        let handleCancel = ()=>{
+            this.setState({getXp:0,xpModal:false});
+        };
+
+        return(
+          <Modal
+              title="获得经验"
+              visible={this.state.xpModal}
+              onOk={handleOk}
+              onCancel={handleCancel}>
+              <InputNumber className="input" value={this.state.getXp} onChange={(v)=>{this.setState({getXp:v});this.state.getXp=v;}} />
+          </Modal>
+        );
     }
     render() {
         let {dnd} = this.props.character;
@@ -184,6 +223,7 @@ class BaseData extends Component {
                   </Col>
               </Row>
               <div className="littleInterval"></div>
+              <div className="littleInterval"></div>
               {(()=>{
                  let attrArr = [{key:'str',name:'力量'},
                      {key:'dex',name:'敏捷'},
@@ -217,11 +257,14 @@ class BaseData extends Component {
               })()}
           </div>
         );
+        //render weaponList
+        let renderWeaponList = this.state.weaponList.map((k,i)=>{
 
-
+        });
 
         return (
             <div className="contentWrapper">
+                {this.renderXpModal()}
                 <Row type="flex" align="middle">
                     <Col span={2} >
                         <p className="label">姓名</p>
@@ -296,16 +339,100 @@ class BaseData extends Component {
                             <Col span={4} >
                                 <p className="label">经验</p>
                             </Col>
-                            <Col span={10} >
-                                <Stepper value={dnd.xp}
-                                         onChange={(v)=>{this.onChangeNum('xp',v)}}></Stepper>
+                            <Col span={5} >
+                                <InputNumber value={dnd.xp} className="input"
+                                         onChange={(v)=>{this.onChangeNum('xp',v)}}></InputNumber>
+                            </Col>
+                            <Col span={5}>
+                                <Button size="large" onClick={()=>{this.handleGetXp()}} >获得经验</Button>
                             </Col>
                             <Col span={8} >
                                 <Button size="large" onClick={()=>{this.handleUpGrade()}} >升级</Button>
                             </Col>
                         </Row>
+                        <div className="littleInterval"></div>
+                        <Row type="flex" align="middle">
+                            <Col span={4} >
+                                <p className="label">生命</p>
+                            </Col>
+                            <Col span={10} >
+                                <Stepper value={dnd.hp}
+                                             onChange={(v)=>{this.onChangeNum('hp',v)}}></Stepper>
+                            </Col>
+                            <Col span={8} >
+                            </Col>
+                        </Row>
+                        <div className="littleInterval"></div>
+                        <Row type="flex" align="middle">
+                            <Col span={4} >
+                                <p className="label">AC</p>
+                            </Col>
+                            <Col span={4}>
+                                <p className="label">装备</p>
+                            </Col>
+                            <Col span={9} >
+                                <Stepper value={dnd.acArmor}
+                                         onChange={(v)=>{this.onChangeNum('acArmor',v)}}></Stepper>
+                            </Col>
+                            <Col span={3} >
+                                <p className="label">=></p>
+                            </Col>
+                            <Col span={4} >
+                                <p className="label">{10 + getAttrAdjustValue(dnd.dex) + parseInt(dnd.acArmor)}</p>
+                            </Col>
+                        </Row>
+                        <div className="littleInterval"></div>
+                        <Row type="flex" align="middle">
+                            <Col span={8} >
+                                <p className="label">强韧豁免</p>
+                            </Col>
+                            <Col span={10} >
+                                <Stepper value={dnd.fortitude}
+                                         onChange={(v)=>{this.onChangeNum('fortitude',v)}}></Stepper>
+                            </Col>
+                            <Col span={6} >
+                            </Col>
+                        </Row>
+                        <div className="littleInterval"></div>
+                        <Row type="flex" align="middle">
+                            <Col span={8} >
+                                <p className="label">反射豁免</p>
+                            </Col>
+                            <Col span={10} >
+                                <Stepper value={dnd.reflex}
+                                         onChange={(v)=>{this.onChangeNum('reflex',v)}}></Stepper>
+                            </Col>
+                            <Col span={6} >
+                            </Col>
+                        </Row>
+                        <div className="littleInterval"></div>
+                        <Row type="flex" align="middle">
+                            <Col span={8} >
+                                <p className="label">意志豁免</p>
+                            </Col>
+                            <Col span={10} >
+                                <Stepper value={dnd.will}
+                                         onChange={(v)=>{this.onChangeNum('will',v)}}></Stepper>
+                            </Col>
+                            <Col span={6} >
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
+                <div className="littleInterval"></div>
+                <Row type="flex" align="middle">
+                    <Col span={2} >
+                        <p className="label">武器</p>
+                    </Col>
+                    <Col span={6} >
+                        <p className="label">基本攻击加值</p>
+                    </Col>
+                    <Col span={5} >
+                        <Stepper value={dnd.basicAttackBonus}
+                                 onChange={(v)=>{this.onChangeNum('basicAttackBonus',v)}}></Stepper>
+                    </Col>
+                </Row>
+
 
 
             </div>

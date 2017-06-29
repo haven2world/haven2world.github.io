@@ -13,7 +13,11 @@ export default function initLocalStorage () {
     dnd.faith = '博卡布';
 	dnd.xp = 0;
 	dnd.hp = 8;
-	dnd.ac = 10;
+	dnd.acArmor = 10;
+
+	dnd.fortitude = 0;
+	dnd.reflex = 0;
+	dnd.will = 0;
 
 
 	dnd.str = 10;
@@ -22,6 +26,10 @@ export default function initLocalStorage () {
 	dnd.int = 10;
 	dnd.wis = 10;
 	dnd.cha = 10;
+
+	dnd.basicAttackBonus = 0;
+	dnd.weaponList = `{"name":"木棒","attackBonus":0,"damage":"1d4-1d6","crit":"20 *2","range":10,"feature":"无"}`;
+
 
 	for(let i in dnd){
 		localStorage[i] = dnd[i];
