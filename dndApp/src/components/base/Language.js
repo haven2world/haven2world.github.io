@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import {Row,Col} from 'antd'
-import { Menu, Icon, Breadcrumb ,Card ,Modal, Input,InputNumber,Form,Button,Select} from 'antd';
+import { Menu, Icon, Breadcrumb ,Card ,Modal, Input,InputNumber,Form,Button,Select,Switch } from 'antd';
 import {Router, Route, Link, hashHistory,IndexRedirect } from 'react-router';
 import * as CharacterActions from '../../actions/Character';
 import roleData from '../../asset/role';
@@ -16,19 +16,19 @@ import {getAttrAdjustValue} from '../../utli/Common';
 
 const Option = Select.Option;
 
-class BaseData extends Component {
+class Language extends Component {
     constructor() {
         super();
         this.state = {
             role:[],
             xpModal:false,
             getXp:0,
-            weaponList:[]
+            weaponList:[],
         }
     }
 
     componentDidMount() {
-
+        this.props.actions.fetchCharacter();
     }
 
     componentWillReceiveProps(nextProps) {
@@ -77,7 +77,7 @@ class BaseData extends Component {
     }
     onDeleteRole(i){
         let role = this.state.role;
-        role.splice(i,1)
+        role.splice(i,1);
         this.state.role = role;
         this.setState({role});
         this.onChangeRole();
@@ -95,6 +95,21 @@ class BaseData extends Component {
     onChangeWeaponItem(i,key,value){
         let weaponList = this.state.weaponList;
         weaponList[i][key] = value;
+        this.state.weaponList = weaponList;
+        this.setState({weaponList});
+        this.onChangeWeaponList();
+    }
+    onAddWeapon(){
+        let k = {"name":"木棒","attackBonus":0,"damage":"1d4-1d6","crit":"20 *2","range":10,"feature":"无","arrows":0};
+        let weaponList = this.state.weaponList;
+        weaponList.push(k);
+        this.state.weaponList = weaponList;
+        this.setState({weaponList});
+        this.onChangeWeaponList();
+    }
+    onDeleteWeapon(i){
+        let weaponList = this.state.weaponList;
+        weaponList.splice(i,1);
         this.state.weaponList = weaponList;
         this.setState({weaponList});
         this.onChangeWeaponList();
@@ -259,7 +274,93 @@ class BaseData extends Component {
         );
         //render weaponList
         let renderWeaponList = this.state.weaponList.map((k,i)=>{
-
+            return(
+              <div key={i}>
+                  <div className="littleInterval"></div>
+                  <Row type="flex" align="middle">
+                      <Col span={1}>
+                          {(()=>{
+                             if(i == 0){
+                                 return(
+                                     <a className="text" onClick={()=>{this.onAddWeapon()}}><Icon type="plus" /></a>
+                                 );
+                             } else{
+                                 return(
+                                     <a className="text" onClick={()=>{this.onDeleteWeapon()}}><Icon type="minus" /></a>
+                                 )
+                             }
+                          })()}
+                      </Col>
+                      <Col span={7}>
+                          <Input size="large" placeholder="武器名" className="input"
+                                 value={k.name}
+                                 onChange={(e)=>{this.onChangeWeaponItem(i,'name',e.target.value)}}
+                          />
+                      </Col>
+                      <Col span={4}><p className="label">攻击加值</p></Col>
+                      <Col span={5}>
+                          <Stepper value={k.attackBonus}
+                                   onChange={(v)=>{this.onChangeWeaponItem(i,'attackBonus',v)}}></Stepper>
+                      </Col>
+                      <Col span={2}><p className="label">射程</p></Col>
+                      <Col span={5}>
+                          <Stepper value={k.range}
+                                   onChange={(v)=>{this.onChangeWeaponItem(i,'range',v)}}></Stepper>
+                      </Col>
+                  </Row>
+                  <div className="littleInterval"></div>
+                  <Row type="flex" align="middle">
+                      <Col span={4}><p className="label">重击倍数</p></Col>
+                      <Col span={4}>
+                          <Input size="large" className="input"
+                                 value={k.crit}
+                                 onChange={(e)=>{this.onChangeWeaponItem(i,'crit',e.target.value)}}
+                          />
+                      </Col>
+                      <Col span={3}><p className="label">伤害</p></Col>
+                      <Col span={4}>
+                          <Input size="large" className="input"
+                                 value={k.damage}
+                                 onChange={(e)=>{this.onChangeWeaponItem(i,'damage',e.target.value)}}
+                          />
+                      </Col>
+                      <Col span={2} ><p className="label">特性</p></Col>
+                      <Col span={7}>
+                          <Input size="large" placeholder="特性" className="input"
+                                 value={k.feature}
+                                 onChange={(e)=>{this.onChangeWeaponItem(i,'feature',e.target.value)}}
+                          />
+                      </Col>
+                  </Row>
+                  <div className="littleInterval"></div>
+                  <Row type="flex" align="middle">
+                      <Col span={1} />
+                      <Col span={1}>
+                          <Switch defaultChecked={k.arrowFlag} onChange={(v)=>{this.onChangeWeaponItem(i,'arrowFlag',v)}} />
+                      </Col>
+                      <Col span={2}><p className="label">弹药</p></Col>
+                      {(()=>{
+                         if(k.arrowFlag){
+                             return(
+                                 <Col span={13} >
+                                     <Row type="flex" align="middle">
+                                         <Col span={12}>
+                                             <Stepper value={k.arrows}
+                                                      onChange={(v)=>{this.onChangeWeaponItem(i,'arrows',v)}}></Stepper>
+                                         </Col>
+                                         <Col span={12}>
+                                             <Button size="large" onClick={()=>{this.onChangeWeaponItem(i,'arrows',k.arrows+10)}} >购买10</Button>
+                                             <Button size="large" onClick={()=>{this.onChangeWeaponItem(i,'arrows',k.arrows-1)}} >攻击</Button>
+                                         </Col>
+                                     </Row>
+                                 </Col>
+                             )
+                         }
+                      })()}
+                  </Row>
+                  <div className="littleInterval"></div>
+              </div>
+            );
         });
 
         return (
@@ -368,7 +469,7 @@ class BaseData extends Component {
                                 <p className="label">AC</p>
                             </Col>
                             <Col span={4}>
-                                <p className="label">装备</p>
+                                <p className="label">防具</p>
                             </Col>
                             <Col span={9} >
                                 <Stepper value={dnd.acArmor}
@@ -432,7 +533,7 @@ class BaseData extends Component {
                                  onChange={(v)=>{this.onChangeNum('basicAttackBonus',v)}}></Stepper>
                     </Col>
                 </Row>
-
+                {renderWeaponList}
 
 
             </div>
@@ -452,4 +553,4 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(BaseData)
+export default connect(mapStateToProps, mapDispatchToProps)(Language)

@@ -18,7 +18,7 @@ class CharacterIndex extends Component{
   }
 
   componentDidMount() {
-    this.props.actions.fetchCharacter();
+
   }
 
   componentWillUnmount() {

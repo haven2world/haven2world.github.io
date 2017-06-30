@@ -34,7 +34,24 @@ export default class CharacterSider extends Component{
     }
 
     render(){
-
+        let loctions = window.location.href.split('#')[1].split('?')[0].split('/');
+        let selected = '1';
+        if(loctions[1].toLowerCase() == 'character'){
+            switch (loctions[2].toLowerCase()){
+                case 'basicdata':
+                    selected = '1';
+                    break;
+                case 'skill':
+                    selected = '2';
+                    break;
+                case 'backpack':
+                    selected = '3';
+                    break;
+                case 'language':
+                    selected = '4';
+                    break;
+            }
+        }
         return(
             <Layout >
                 <Sider
@@ -44,29 +61,29 @@ export default class CharacterSider extends Component{
                     style={{minHeight:'100%'}}
                 >
                     <div className="logo" />
-                    <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
+                    <Menu theme="dark" mode="inline" selectedKeys={[selected]}>
                         <Menu.Item key="1">
-                            <Link>
+                            <Link to="/character/basicData">
                                 <Icon type="user" className="text" />
-                                <span className="nav-text text">nav 1</span>
+                                <span className="nav-text text">基础信息</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="2">
-                            <Link>
-                                <Icon type="video-camera" className="text"  />
-                                <span className="nav-text text">nav 2</span>
+                            <Link to="/character/Skill">
+                                <Icon type="dingding" className="text"  />
+                                <span className="nav-text text">技能 法术</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="3">
-                            <Link>
-                                <Icon type="upload" className="text"  />
-                                <span className="nav-text text">nav 3</span>
+                            <Link to="/character/Backpack">
+                                <Icon type="skin" className="text"  />
+                                <span className="nav-text text">装备 背包</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="4">
-                            <Link>
-                                <Icon type="user" className="text"  />
-                                <span className="nav-text text">nav 4</span>
+                            <Link to="/character/Language">
+                                <Icon type="gift" className="text"  />
+                                <span className="nav-text text">专长 语言</span>
                             </Link>
                         </Menu.Item>
                     </Menu>

@@ -6,7 +6,10 @@ import store from '../store/Store';
 import Indexdiv from '../components/index';
 import character from '../components/base/Character';
 import init from '../utli/Init';
-import BaseData from '../components/base/BaseData';
+import BasicData from '../components/base/BasicData';
+import Backpack from '../components/base/Backpack';
+import Language from '../components/base/Language';
+import Skill from '../components/base/Skill';
 
 const storeInstance = store();
 if(!localStorage.initFlag){
@@ -28,9 +31,12 @@ export default class App extends Component {
 				<div className="router">
 				  <Router history={hashHistory}>
 				  <Route name="Index" path="/" component={Indexdiv}  >
-						<IndexRedirect to="/character/baseData"/>
+						<IndexRedirect to="/character/BasicData"/>
 						<Route name="character" path="character" component={character}>
-							<Route name="baseData" path="baseData" component={BaseData}></Route>
+							<Route name="BasicData" path="BasicData" component={BasicData}></Route>
+							<Route name="Backpack" path="Backpack" component={Backpack}></Route>
+							<Route name="Language" path="Language" component={Language}></Route>
+							<Route name="Skill" path="Skill" component={Skill}></Route>
 						</Route>
 
 						<Route path="*" onEnter={errorToHome} />
@@ -43,5 +49,5 @@ export default class App extends Component {
 }
 
 function errorToHome (nextState, replace) {
-	replace(nextState.location.pathname, '/character');
+	replace(nextState.location.pathname, '/character/BasicData');
 }
