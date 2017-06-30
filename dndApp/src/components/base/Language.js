@@ -40,6 +40,7 @@ class Language extends Component {
         this.setState({role,weaponList});
     }
     componentWillUnmount() {
+
     }
 
     onChangeText(key,e){
