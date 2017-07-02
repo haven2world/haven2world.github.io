@@ -28,12 +28,14 @@ export default function initLocalStorage () {
 	dnd.cha = 10;
 
 	dnd.basicAttackBonus = 0;
-	dnd.weaponList = `[{"name":"木棒","attackBonus":0,"damage":"1d4-1d6","crit":"20 *2","range":10,"feature":"无","arrows":0,"arrowFlag":false}]`;
+	dnd.weaponList = `[{"name":"木棒","attackBonus":0,"damage":"1d4-1d6","crit":"20 *2","range":10,"feature":"无","arrows":0,"arrowFlag":false,"weight":1}]`;
 	dnd.armorList = '[{"name":"盔甲","armorBonus":1,"maxDexBonus":8,"testImpairment":0,"magicFailure":0.05,"speed":"30 20","weight":10,"feature":"无"},' +
 		'{"name":"无","armorBonus":0,"maxDexBonus":0,"testImpairment":0,"magicFailure":0,"speed":"30 20","weight":0,"feature":"无"},' +
 		'{"name":"无","armorBonus":0,"maxDexBonus":0,"testImpairment":0,"magicFailure":0,"speed":"30 20","weight":0,"feature":"无"},' +
 		'{"name":"无","armorBonus":0,"maxDexBonus":0,"testImpairment":0,"magicFailure":0,"speed":"30 20","weight":0,"feature":"无"}]';
-	dnd.backpack = '[{"name":"无","amount":0,"weight":0}]';
+	dnd.backpackList = `[{"name":"无","amount":0,"weight":0}]`;
+
+	dnd.skillList = `[{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0}]`;
 
 
 	for(let i in dnd){

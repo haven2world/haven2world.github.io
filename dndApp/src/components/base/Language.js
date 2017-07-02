@@ -10,8 +10,8 @@ import {Row,Col} from 'antd'
 import { Menu, Icon, Breadcrumb ,Card ,Modal, Input,InputNumber,Form,Button,Select,Switch } from 'antd';
 import {Router, Route, Link, hashHistory,IndexRedirect } from 'react-router';
 import * as CharacterActions from '../../actions/Character';
-import roleData from '../../asset/role';
-import Stepper from '../common/Stepper';
+import roleData from '../../asset/RoleData';
+import Stepper from '../common/Stepper_ant';
 import {getAttrAdjustValue} from '../../utli/Common';
 
 const Option = Select.Option;

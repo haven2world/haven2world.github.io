@@ -10,8 +10,8 @@ import {Row,Col} from 'antd'
 import { Menu, Icon, Breadcrumb ,Card ,Modal, Input,InputNumber,Form,Button,Select,Switch } from 'antd';
 import {Router, Route, Link, hashHistory,IndexRedirect } from 'react-router';
 import * as CharacterActions from '../../actions/Character';
-import roleData from '../../asset/role';
-import Stepper from '../common/Stepper';
+import roleData from '../../asset/RoleData';
+import Stepper from '../common/Stepper_ant';
 import {getAttrAdjustValue} from '../../utli/Common';
 
 const Option = Select.Option;
@@ -100,7 +100,7 @@ class BaseData extends Component {
         this.onChangeWeaponList();
     }
     onAddWeapon(){
-        let k = {"name":"木棒","attackBonus":0,"damage":"1d4-1d6","crit":"20 *2","range":10,"feature":"无","arrows":0};
+        let k = {"name":"木棒","attackBonus":0,"damage":"1d4-1d6","crit":"20 *2","range":10,"feature":"无","arrows":0,"weight":1};
         let weaponList = this.state.weaponList;
         weaponList.push(k);
         this.state.weaponList = weaponList;
@@ -278,19 +278,19 @@ class BaseData extends Component {
               <div key={i}>
                   <div className="littleInterval"></div>
                   <Row type="flex" align="middle">
-                      <Col span={1}>
-                          {(()=>{
-                             if(i == 0){
-                                 return(
-                                     <a className="text" onClick={()=>{this.onAddWeapon()}}><Icon type="plus" /></a>
-                                 );
-                             } else{
-                                 return(
-                                     <a className="text" onClick={()=>{this.onDeleteWeapon()}}><Icon type="minus" /></a>
-                                 )
-                             }
-                          })()}
-                      </Col>
+                          <Col span={1}>
+                              {(()=>{
+                                 if(i == 0){
+                                     return(
+                                         <a className="text" onClick={()=>{this.onAddWeapon()}}><Icon type="plus" /></a>
+                                     );
+                                 } else{
+                                     return(
+                                         <a className="text" onClick={()=>{this.onDeleteWeapon()}}><Icon type="minus" /></a>
+                                     )
+                                 }
+                              })()}
+                          </Col>
                       <Col span={7}>
                           <Input size="large" placeholder="武器名" className="input"
                                  value={k.name}
@@ -334,7 +334,11 @@ class BaseData extends Component {
                   </Row>
                   <div className="littleInterval"></div>
                   <Row type="flex" align="middle">
-                      <Col span={1} />
+                      <Col span={2} ><p className="label">重量</p></Col>
+                      <Col span={5} >
+                          <Stepper value={k.weight}
+                                   onChange={(v)=>{this.onChangeWeaponItem(i,'weight',v)}}></Stepper>
+                      </Col>
                       <Col span={1}>
                           <Switch defaultChecked={k.arrowFlag} onChange={(v)=>{this.onChangeWeaponItem(i,'arrowFlag',v)}} />
                       </Col>

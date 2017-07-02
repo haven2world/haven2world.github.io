@@ -10,9 +10,8 @@ import {Row,Col} from 'antd'
 import { Menu, Icon, Breadcrumb ,Card ,Modal, Input,InputNumber,Form,Button,Select,Switch } from 'antd';
 import {Router, Route, Link, hashHistory,IndexRedirect } from 'react-router';
 import * as CharacterActions from '../../actions/Character';
-import roleData from '../../asset/role';
-import Stepper from '../common/Stepper';
-import {getAttrAdjustValue} from '../../utli/Common';
+import Stepper from '../common/Stepper_ant';
+import {getWeight} from '../../utli/Common';
 
 const Option = Select.Option;
 
@@ -21,6 +20,7 @@ class Backpack extends Component {
         super();
         this.state = {
             armorList:[],
+            backpackList:[]
         }
     }
 
@@ -32,8 +32,8 @@ class Backpack extends Component {
         let {dnd} = nextProps.character;
 
         let armorList = JSON.parse(dnd.armorList);
-
-        this.setState({armorList});
+        let backpackList = JSON.parse(dnd.backpackList);
+        this.setState({armorList,backpackList});
     }
     componentWillUnmount() {
     }
@@ -59,7 +59,33 @@ class Backpack extends Component {
         this.setState({armorList});
         this.onChangeArmorList();
     }
-
+    onChangeBackpackList(){
+        let actions = this.props.actions;
+        let v = JSON.stringify(this.state.backpackList);
+        actions.updateCharacter('backpackList',v);
+    }
+    onChangeBackpackItem(i,key,value){
+        let backpackList = this.state.backpackList;
+        backpackList[i][key] = value;
+        this.state.backpackList = backpackList;
+        this.setState({backpackList});
+        this.onChangeBackpackList();
+    }
+    onAddBackpack(){
+        let k = {"name":"无","amount":0,"weight":0};
+        let backpackList = this.state.backpackList;
+        backpackList.push(k);
+        this.state.backpackList = backpackList;
+        this.setState({backpackList});
+        this.onChangeBackpackList();
+    }
+    onDeleteBackpack(i){
+        let backpackList = this.state.backpackList;
+        backpackList.splice(i,1);
+        this.state.backpackList = backpackList;
+        this.setState({backpackList});
+        this.onChangeBackpackList();
+    }
 
 
     render() {
@@ -255,13 +281,56 @@ class Backpack extends Component {
             );
         }
         //render backpack
-        let renderBackpack = null;
+        let renderBackpack = this.state.backpackList.map((k,i)=>{
+            return(
+                <div key={i}>
+                    <Row type="flex" align="middle" key={i}>
+                        <Col span={2}>
+                            {(()=>{
+                                if(i == 0){
+                                    return(
+                                        <a className="text" onClick={()=>{this.onAddBackpack()}}><Icon type="plus" /></a>
+                                    );
+                                } else{
+                                    return(
+                                        <a className="text" onClick={()=>{this.onDeleteBackpack()}}><Icon type="minus" /></a>
+                                    )
+                                }
+                            })()}
+                        </Col>
+                        <Col span={7}><Input size="large" placeholder="物品名" className="input"
+                                              value={k.name}
+                                              onChange={(e)=>{this.onChangeBackpackItem(i,'name',e.target.value)}}
+                        /></Col>
+                        <Col span={2}><p className="label">数量</p></Col>
+                        <Col span={5}>
+                            <Stepper value={k.amount}
+                                     onChange={(v)=>{this.onChangeBackpackItem(i,'amount',v)}}></Stepper>
+                        </Col>
+                        <Col span={4}><p className="label">X &nbsp;&nbsp;重量/单位</p></Col>
+                        <Col span={2}>
+                            <InputNumber value={k.weight} className="input"
+                                     onChange={(v)=>{this.onChangeBackpackItem(i,'weight',v)}}></InputNumber>
+                        </Col>
+                        <Col span={2}><p className="label">={k.amount * k.weight}</p></Col>
+                    </Row>
+                    <div className="littleInterval"></div>
+                </div>
+            );
+        });
 
 
         return (
             <div className="contentWrapper">
                 {renderArmorList}
-
+                <div className="littleInterval"></div>
+                <div className="littleInterval"></div>
+                <Row type="flex" align="middle" >
+                    <Col span={2}><p className="label">背包</p></Col>
+                    <Col span={5} ><p className="label">总负重:&nbsp;&nbsp;{getWeight(dnd)}&nbsp;磅</p></Col>
+                </Row>
+                <div className="littleInterval"></div>
+                {renderBackpack}
 
             </div>
 
