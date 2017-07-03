@@ -10,6 +10,7 @@ import BasicData from '../components/base/BasicData';
 import Backpack from '../components/base/Backpack';
 import Language from '../components/base/Language';
 import Skill from '../components/base/Skill';
+import Magic from '../components/base/Magic';
 
 const storeInstance = store();
 if(!localStorage.initFlag){
@@ -37,6 +38,7 @@ export default class App extends Component {
 							<Route name="Backpack" path="Backpack" component={Backpack}></Route>
 							<Route name="Language" path="Language" component={Language}></Route>
 							<Route name="Skill" path="Skill" component={Skill}></Route>
+							<Route name="Magic" path="Magic" component={Magic}></Route>
 						</Route>
 
 						<Route path="*" onEnter={errorToHome} />

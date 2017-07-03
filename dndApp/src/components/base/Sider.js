@@ -44,11 +44,14 @@ export default class CharacterSider extends Component{
                 case 'skill':
                     selected = '2';
                     break;
-                case 'backpack':
+                case 'magic':
                     selected = '3';
                     break;
-                case 'language':
+                case 'backpack':
                     selected = '4';
+                    break;
+                case 'language':
+                    selected = '6';
                     break;
             }
         }
@@ -70,17 +73,23 @@ export default class CharacterSider extends Component{
                         </Menu.Item>
                         <Menu.Item key="2">
                             <Link to="/character/Skill">
-                                <Icon type="dingding" className="text"  />
-                                <span className="nav-text text">技能 法术</span>
+                                <Icon type="star-o" className="text"  />
+                                <span className="nav-text text">技能</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="3">
+                            <Link to="/character/Magic">
+                                <Icon type="dingding" className="text"  />
+                                <span className="nav-text text">法术</span>
+                            </Link>
+                        </Menu.Item>
+                        <Menu.Item key="4">
                             <Link to="/character/Backpack">
                                 <Icon type="skin" className="text"  />
                                 <span className="nav-text text">装备 背包</span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="4">
+                        <Menu.Item key="5">
                             <Link to="/character/Language">
                                 <Icon type="gift" className="text"  />
                                 <span className="nav-text text">专长 语言</span>

@@ -119,7 +119,7 @@ class BaseData extends Component {
         return value;
     }
     handleUpGrade(){
-        this.onChangeNum('xp',0);
+
     }
     handleGetXp(){
         this.setState({xpModal:true});
@@ -286,7 +286,7 @@ class BaseData extends Component {
                                      );
                                  } else{
                                      return(
-                                         <a className="text" onClick={()=>{this.onDeleteWeapon()}}><Icon type="minus" /></a>
+                                         <a className="text" onClick={()=>{this.onDeleteWeapon(i)}}><Icon type="minus" /></a>
                                      )
                                  }
                               })()}

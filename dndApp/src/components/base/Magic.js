@@ -22,8 +22,7 @@ class Skill extends Component {
         super();
         this.state = {
             skillList:[],
-            role:[],
-            specialSkillList:[]
+            role:[]
         }
     }
 
@@ -36,9 +35,8 @@ class Skill extends Component {
 
         let role = JSON.parse(dnd.role);
         let skillList = JSON.parse(dnd.skillList);
-        let specialSkillList = JSON.parse(dnd.specialSkillList);
 
-        this.setState({role,skillList,specialSkillList});
+        this.setState({role,skillList});
     }
     componentWillUnmount() {
     }
@@ -64,33 +62,20 @@ class Skill extends Component {
         this.setState({skillList});
         this.onChangeSkillList();
     }
-
-    onChangeSpecialSkillList(){
-        let actions = this.props.actions;
-        let v = JSON.stringify(this.state.specialSkillList);
-        actions.updateCharacter('specialSkillList',v);
+    onAddSkill(){
+        let k = {"name":"木棒","attackBonus":0,"damage":"1d4-1d6","crit":"20 *2","range":10,"feature":"无","arrows":0};
+        let skillList = this.state.skillList;
+        skillList.push(k);
+        this.state.skillList = skillList;
+        this.setState({skillList});
+        this.onChangeSkillList();
     }
-    onChangeSpecialSkillItem(i,key,value){
-        let specialSkillList = this.state.specialSkillList;
-        specialSkillList[i][key] = value;
-        this.state.specialSkillList = specialSkillList;
-        this.setState({specialSkillList});
-        this.onChangeSpecialSkillList();
-    }
-    onAddSpecialSkill(){
-        let k = {"name":"无","amount":0,"weight":0};
-        let specialSkillList = this.state.specialSkillList;
-        specialSkillList.push(k);
-        this.state.specialSkillList = specialSkillList;
-        this.setState({specialSkillList});
-        this.onChangeSpecialSkillList();
-    }
-    onDeleteSpecialSkill(i){
-        let specialSkillList = this.state.specialSkillList;
-        specialSkillList.splice(i,1);
-        this.state.specialSkillList = specialSkillList;
-        this.setState({specialSkillList});
-        this.onChangeSpecialSkillList();
+    onDeleteSkill(i){
+        let skillList = this.state.skillList;
+        skillList.splice(i,1);
+        this.state.skillList = skillList;
+        this.setState({skillList});
+        this.onChangeSkillList();
     }
 
 
@@ -141,53 +126,9 @@ class Skill extends Component {
               </div>
             );
         });
-        //render specialSkill
-        let rendeSpecialSkill = this.state.specialSkillList.map((k,i)=>{
-
-            return(
-              <div key={i}>
-                  <div className="littleInterval"></div>
-                  <Row type="flex" align="middle">
-                      <Col span={2}>
-                          {(()=>{
-                              if(i == 0){
-                                  return(
-                                      <a className="text" onClick={()=>{this.onAddSpecialSkill()}}><Icon type="plus" /></a>
-                                  );
-                              } else{
-                                  return(
-                                      <a className="text" onClick={()=>{this.onDeleteSpecialSkill(i)}}><Icon type="minus" /></a>
-                                  )
-                              }
-                          })()}
-                      </Col>
-                      <Col span={6}><Input size="large"  className="input"
-                                           value={k.name}
-                                           onChange={(e)=>{this.onChangeSpecialSkillItem(i,'name',e.target.value)}}
-                      /></Col>
-                      <Col span={16}><Input size="large" placeholder="描述" className="input"
-                                           value={k.description}
-                                           onChange={(e)=>{this.onChangeSpecialSkillItem(i,'description',e.target.value)}}
-                      /></Col>
-                  </Row>
-
-              </div>
-            );
-        });
 
         return (
             <div className="contentWrapper">
-                <Row type="flex" align="middle">
-                    <Col span={2} />
-                    <Col span={6} >
-                        <p className="label" style={{textAlign:'center'}}>特殊能力</p>
-                    </Col>
-                    <Col span={2} >
-                        <p className="label">描述</p>
-                    </Col>
-                </Row>
-                {rendeSpecialSkill}
-                <div className="littleInterval"></div>
                 <Row type="flex" align="middle">
                     <Col span={2} >
                         <p className="label">技能</p>
@@ -221,8 +162,8 @@ class Skill extends Component {
                 {renderSkillList}
                 <div className="littleInterval"></div>
                 <Row type="flex" align="middle">
-                    <Col span={5} >
-                        <p className="label" style={{textAlign:'center'}}>共效技能</p>
+                    <Col span={3} >
+                        <p className="label">共效技能</p>
                     </Col>
                 </Row>
                 {(()=>{

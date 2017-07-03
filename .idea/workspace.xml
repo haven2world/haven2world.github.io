@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/dndApp/src/components/base/Backpack.js" line="49" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e7ed9e5e-6c14-4610-ba48-7bfb05545562" name="默认" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dndApp/src/asset/MagicData.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dndApp/src/components/base/Magic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/DND3.5 word  中文版/11第十一章 法术.doc" afterPath="$PROJECT_DIR$/dndApp/DND3.5 word  中文版/11第十一章 法术.doc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/components/base/Backpack.js" afterPath="$PROJECT_DIR$/dndApp/src/components/base/Backpack.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/components/base/BasicData.js" afterPath="$PROJECT_DIR$/dndApp/src/components/base/BasicData.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/components/base/Language.js" afterPath="$PROJECT_DIR$/dndApp/src/components/base/Language.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/components/base/Sider.js" afterPath="$PROJECT_DIR$/dndApp/src/components/base/Sider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/components/base/Skill.js" afterPath="$PROJECT_DIR$/dndApp/src/components/base/Skill.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/components/common/Stepper_ant.js" afterPath="$PROJECT_DIR$/dndApp/src/components/common/Stepper_ant.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/router/App.js" afterPath="$PROJECT_DIR$/dndApp/src/router/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/utli/Common.js" afterPath="$PROJECT_DIR$/dndApp/src/utli/Common.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/utli/Init.js" afterPath="$PROJECT_DIR$/dndApp/src/utli/Init.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dndApp/src/asset/Co-effectData.js" afterPath="$PROJECT_DIR$/dndApp/src/asset/CoEffectData.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,21 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dndApp/src/router/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Character.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Character.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -51,7 +54,36 @@
         <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Skill.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+              <caret line="223" column="35" selection-start-line="223" selection-start-column="35" selection-end-line="223" selection-end-column="35" />
+              <folding>
+                <marker date="1499070796747" expanded="true" signature="8694:9752" placeholder="&lt;xml/&gt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MagicData.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dndApp/src/asset/MagicData.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="22.798618">
+              <caret line="1424" column="37" selection-start-line="1424" selection-start-column="37" selection-end-line="1424" selection-end-column="37" />
+              <folding>
+                <marker date="1499077928323" expanded="true" signature="71:10030" placeholder="[...]" />
+                <marker date="1499077928323" expanded="true" signature="2534:4677" placeholder="[...]" />
+                <marker date="1499077928323" expanded="true" signature="4689:6500" placeholder="[...]" />
+                <marker date="1499077928323" expanded="true" signature="6512:7789" placeholder="[...]" />
+                <marker date="1499077928323" expanded="true" signature="10012:10030" placeholder="{...}" />
+                <marker date="1499077928323" expanded="true" signature="10028:10030" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoleData.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dndApp/src/asset/RoleData.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -61,7 +93,17 @@
         <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Sider.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="77" column="59" selection-start-line="77" selection-start-column="59" selection-end-line="77" selection-end-column="59" />
+              <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Magic.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Magic.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -71,7 +113,7 @@
         <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Language.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+              <caret line="303" column="106" selection-start-line="303" selection-start-column="106" selection-end-line="303" selection-end-column="106" />
               <folding />
             </state>
           </provider>
@@ -81,7 +123,7 @@
         <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/BasicData.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+              <caret line="288" column="96" selection-start-line="288" selection-start-column="96" selection-end-line="288" selection-end-column="96" />
               <folding />
             </state>
           </provider>
@@ -91,37 +133,17 @@
         <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Backpack.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="260" column="16" selection-start-line="260" selection-start-column="16" selection-end-line="260" selection-end-column="16" />
+              <caret line="303" column="87" selection-start-line="303" selection-start-column="79" selection-end-line="303" selection-end-column="87" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Character.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dndApp/src/actions/Character.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="30" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Init.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Init.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dndApp/src/utli/Init.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.79072535">
-              <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="localStorage-api.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dndApp/localStorage-api.md">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+              <caret line="39" column="61" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -167,19 +189,21 @@
         <option value="$PROJECT_DIR$/dndApp/src/asset/role.js" />
         <option value="$PROJECT_DIR$/dndApp/src/actions/Character.js" />
         <option value="$PROJECT_DIR$/dndApp/src/components/common/Stepper.js" />
-        <option value="$PROJECT_DIR$/dndApp/src/utli/Common.js" />
         <option value="$PROJECT_DIR$/dndApp/src/css/index.css" />
         <option value="$PROJECT_DIR$/dndApp/localStorage-api.md" />
         <option value="$PROJECT_DIR$/dndApp/src/components/base/BaseData.js" />
         <option value="$PROJECT_DIR$/dndApp/src/components/base/baseData.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/components/base/Character.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/components/common/Stepper_ant.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/utli/Common.js" />
         <option value="$PROJECT_DIR$/dndApp/src/router/App.js" />
         <option value="$PROJECT_DIR$/dndApp/src/components/base/Sider.js" />
-        <option value="$PROJECT_DIR$/dndApp/src/components/base/Character.js" />
-        <option value="$PROJECT_DIR$/dndApp/src/components/base/BasicData.js" />
-        <option value="$PROJECT_DIR$/dndApp/src/components/base/Skill.js" />
-        <option value="$PROJECT_DIR$/dndApp/src/components/base/Language.js" />
-        <option value="$PROJECT_DIR$/dndApp/src/components/base/Backpack.js" />
         <option value="$PROJECT_DIR$/dndApp/src/utli/Init.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/components/base/Backpack.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/components/base/BasicData.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/components/base/Language.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/components/base/Skill.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/asset/MagicData.js" />
       </list>
     </option>
   </component>
@@ -244,6 +268,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -525,7 +550,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -546,6 +570,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\myWorkspace\haven2world.github.io\dndApp\src\asset" />
       <recent name="E:\myWorkspace\haven2world.github.io\dndApp\src\components\base" />
       <recent name="E:\myWorkspace\haven2world.github.io\dndApp\src\utli" />
     </key>
@@ -632,8 +657,8 @@
     <option name="totallyTimeSpent" value="8579000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17544784" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -644,6 +669,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3409836" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -654,7 +680,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -678,25 +703,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dndApp/src/reducer/CharacterReducers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dndApp/src/components/backTop.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/asset/role.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -738,19 +748,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/components/common/Stepper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dndApp/src/actions/Character.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -765,14 +766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/asset/role.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -927,14 +920,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/asset/role.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dndApp/src/reducer/CharacterReducers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -942,25 +927,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/components/common/Stepper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dndApp/人物卡1面.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/utli/Common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dndApp/package.json">
@@ -981,7 +950,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="30" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -989,6 +957,45 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/utli/Common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/components/common/Stepper_ant.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24050634">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/asset/SkillData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/asset/CoEffectData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.087456845">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/router/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.785714">
+          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -996,31 +1003,15 @@
     <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Sider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="77" column="59" selection-start-line="77" selection-start-column="59" selection-end-line="77" selection-end-column="59" />
+          <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Skill.js">
+    <entry file="file://$PROJECT_DIR$/dndApp/src/utli/Init.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Language.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/router/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+          <caret line="39" column="61" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -1028,15 +1019,7 @@
     <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Character.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/BasicData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1044,16 +1027,65 @@
     <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Backpack.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="260" column="16" selection-start-line="260" selection-start-column="16" selection-end-line="260" selection-end-column="16" />
+          <caret line="303" column="87" selection-start-line="303" selection-start-column="79" selection-end-line="303" selection-end-column="87" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/utli/Init.js">
+    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/BasicData.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79072535">
-          <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="288" column="96" selection-start-line="288" selection-start-column="96" selection-end-line="288" selection-end-column="96" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Language.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="303" column="106" selection-start-line="303" selection-start-column="106" selection-end-line="303" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Magic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Skill.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="223" column="35" selection-start-line="223" selection-start-column="35" selection-end-line="223" selection-end-column="35" />
+          <folding>
+            <marker date="1499070796747" expanded="true" signature="8694:9752" placeholder="&lt;xml/&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/asset/RoleData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/asset/MagicData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="22.798618">
+          <caret line="1424" column="37" selection-start-line="1424" selection-start-column="37" selection-end-line="1424" selection-end-column="37" />
+          <folding>
+            <marker date="1499077928323" expanded="true" signature="71:10030" placeholder="[...]" />
+            <marker date="1499077928323" expanded="true" signature="2534:4677" placeholder="[...]" />
+            <marker date="1499077928323" expanded="true" signature="4689:6500" placeholder="[...]" />
+            <marker date="1499077928323" expanded="true" signature="6512:7789" placeholder="[...]" />
+            <marker date="1499077928323" expanded="true" signature="10012:10030" placeholder="{...}" />
+            <marker date="1499077928323" expanded="true" signature="10028:10030" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

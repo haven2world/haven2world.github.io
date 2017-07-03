@@ -10,8 +10,24 @@ const style = {
 };
 
 export default class Stepper extends Component{
-    onChange(v){
-        this.props.onChange(v);
+
+    onClickPlus(){
+        if(this.props.onAdd) {
+            this.props.onAdd(parseInt(this.props.value))
+        }
+        if(this.props.onChange){
+            this.props.onChange(parseInt(this.props.value)+1);
+        }
+
+    }
+    onClickMinus(){
+        if(this.props.onReduce) {
+            this.props.onReduce(parseInt(this.props.value))
+        }
+        if(this.props.onChange){
+            this.props.onChange(parseInt(this.props.value)-1);
+        }
+
     }
     render(){
         return (
@@ -23,8 +39,8 @@ export default class Stepper extends Component{
                     </Col>
                     <Col span={2}/>
                     <Col span={14}>
-                        <Button type="primary"  icon="plus" size="large" onClick={()=>{this.onChange(parseInt(this.props.value)+1)}} ></Button>
-                        <Button type="default"  icon="minus" size="large" onClick={()=>{this.onChange(parseInt(this.props.value)-1)}}
+                        <Button type="primary"  icon="plus" size="large" onClick={()=>{this.onClickPlus()}} ></Button>
+                        <Button type="default"  icon="minus" size="large" onClick={()=>{this.onClickMinus()}}
                                 style={{marginLeft:'1rem',marginRight:'1rem'}}
                         ></Button>
                     </Col>

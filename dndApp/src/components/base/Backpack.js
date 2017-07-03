@@ -46,6 +46,14 @@ class Backpack extends Component {
         let actions = this.props.actions;
         actions.updateCharacter(key,v);
     }
+    onChangeMoney(v){
+        let {dnd} = this.props.character;
+        let actions = this.props.actions;
+
+        actions.updateCharacter('money',parseInt(dnd.money) + v);
+
+
+    }
 
     onChangeArmorList(){
         let actions = this.props.actions;
@@ -293,7 +301,7 @@ class Backpack extends Component {
                                     );
                                 } else{
                                     return(
-                                        <a className="text" onClick={()=>{this.onDeleteBackpack()}}><Icon type="minus" /></a>
+                                        <a className="text" onClick={()=>{this.onDeleteBackpack(i)}}><Icon type="minus" /></a>
                                     )
                                 }
                             })()}
@@ -325,6 +333,30 @@ class Backpack extends Component {
                 {renderArmorList}
                 <div className="littleInterval"></div>
                 <div className="littleInterval"></div>
+                <Row type="flex" align="middle" >
+                    <Col span={2}><p className="label">金钱</p></Col>
+                    <Col span={1}><p className="label">金</p></Col>
+                    <Col span={5}>
+                        <Stepper value={Math.floor(dnd.money/100)}
+                                 onAdd={()=>{this.onChangeMoney(100)}}
+                                 onReduce={()=>{this.onChangeMoney(-100)}}
+                        ></Stepper>
+                    </Col>
+                    <Col span={1}><p className="label">银</p></Col>
+                    <Col span={5}>
+                        <Stepper value={Math.floor((dnd.money%100)/10)}
+                                 onAdd={()=>{this.onChangeMoney(10)}}
+                                 onReduce={()=>{this.onChangeMoney(-10)}}
+                        ></Stepper>
+                    </Col>
+                    <Col span={1}><p className="label">铜</p></Col>
+                    <Col span={5}>
+                        <Stepper value={Math.floor(dnd.money%10)}
+                                 onAdd={()=>{this.onChangeMoney(1)}}
+                                 onReduce={()=>{this.onChangeMoney(-1)}}
+                        ></Stepper>
+                    </Col>
+                </Row>
                 <Row type="flex" align="middle" >
                     <Col span={2}><p className="label">背包</p></Col>
                     <Col span={5} ><p className="label">总负重:&nbsp;&nbsp;{getWeight(dnd)}&nbsp;磅</p></Col>

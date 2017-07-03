@@ -34,9 +34,10 @@ export default function initLocalStorage () {
 		'{"name":"无","armorBonus":0,"maxDexBonus":0,"testImpairment":0,"magicFailure":0,"speed":"30 20","weight":0,"feature":"无"},' +
 		'{"name":"无","armorBonus":0,"maxDexBonus":0,"testImpairment":0,"magicFailure":0,"speed":"30 20","weight":0,"feature":"无"}]';
 	dnd.backpackList = `[{"name":"无","amount":0,"weight":0}]`;
+	dnd.money = 10000;
 
 	dnd.skillList = `[{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0},{"skillGrade":0,"otherAdjust":0}]`;
-
+	dnd.specialSkillList = '[{"name":"无","description":""}]';
 
 	for(let i in dnd){
 		localStorage[i] = dnd[i];

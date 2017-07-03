@@ -287,7 +287,7 @@ class Language extends Component {
                                  );
                              } else{
                                  return(
-                                     <a className="text" onClick={()=>{this.onDeleteWeapon()}}><Icon type="minus" /></a>
+                                     <a className="text" onClick={()=>{this.onDeleteWeapon(i)}}><Icon type="minus" /></a>
                                  )
                              }
                           })()}
