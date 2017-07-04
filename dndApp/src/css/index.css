@@ -52,3 +52,12 @@ p.label{
     line-height: 2.4rem!important;
     height:  2.4rem!important;
 }
+.ant-checkbox-inner{
+    width: 1.5rem!important;
+    height: 1.5rem!important;
+}
+.ant-checkbox-checked .ant-checkbox-inner:after {
+    left: 6px!important;
+    width: 10px!important;
+    height: 16px!important;
+}
