@@ -61,7 +61,6 @@ export default class CharacterSider extends Component{
                     breakpoint="lg"
                     collapsedWidth="0"
                     onCollapse={(collapsed, type) => { console.log(collapsed, type); }}
-                    style={{height:document.documentElement.clientHeight}}
                 >
                     <div className="logo" />
                     <Menu theme="dark" mode="inline" selectedKeys={[selected]}>

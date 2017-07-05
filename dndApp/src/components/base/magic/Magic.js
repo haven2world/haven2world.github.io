@@ -219,7 +219,7 @@ class Magic extends Component {
                                 </Col>
                             </Row>
                             <div className="littleInterval"></div>
-                            {this.renderMagics(role=='3'?this.state.magicList[role].magic[i]:this.state.magicList[role][i],role=='3'?magicData[dataIndex].magic[i]:magicData[dataIndex][i],(!(role=='2'||role=='4')),role,i)}
+                            {this.renderMagics(role=='3'?this.state.magicList[role].magic[i]:this.state.magicList[role][i],role=='3'?magicData[dataIndex].magic[i]:magicData[dataIndex][i],(!(role=='2'||role=='4'||role=='10')),role,i)}
                         </Col>
                         <Col span={12} >
                             <Row type="flex" align="middle">
@@ -228,6 +228,11 @@ class Magic extends Component {
                                 </Col>
                             </Row>
                             <div className="littleInterval"></div>
+                            <Row type="flex" align="middle">
+                                <Col span={24} >
+                                    <p className="label" style={{textAlign:'center'}}>正在整理数据与开发中</p>
+                                </Col>
+                            </Row>
 
                         </Col>
                     </Row>
@@ -265,7 +270,7 @@ class Magic extends Component {
                                 </Col>
                             </Row>
                             <div className="littleInterval"></div>
-                            {this.renderMagics(role=='3'?this.state.magicList[role].magic[i]:this.state.magicList[role][i],role=='3'?magicData[dataIndex].magic[i]:magicData[dataIndex][i],(!(role=='2'||role=='4')),role,i)}
+                            {this.renderMagics(role=='3'?this.state.magicList[role].magic[i]:this.state.magicList[role][i],role=='3'?magicData[dataIndex].magic[i]:magicData[dataIndex][i],(!(role=='2'||role=='4'||role=='10')),role,i)}
                         </Col>
                         <Col span={12} >
                             <Row type="flex" align="middle">
@@ -274,6 +279,11 @@ class Magic extends Component {
                                 </Col>
                             </Row>
                             <div className="littleInterval"></div>
+                            <Row type="flex" align="middle">
+                                <Col span={24} >
+                                    <p className="label" style={{textAlign:'center'}}>正在整理数据与开发中</p>
+                                </Col>
+                            </Row>
 
                         </Col>
                     </Row>
@@ -315,7 +325,7 @@ class Magic extends Component {
                                 </Col>
                            </Row>
                            <div className="littleInterval"></div>
-                           {this.renderMagics(role=='3'?this.state.magicList[role].magic[i]:this.state.magicList[role][i],role=='3'?magicData[dataIndex].magic[i]:magicData[dataIndex][i],(!(role=='2'||role=='4')),role,i)}
+                           {this.renderMagics(role=='3'?this.state.magicList[role].magic[i]:this.state.magicList[role][i],role=='3'?magicData[dataIndex].magic[i]:magicData[dataIndex][i],(!(role=='2'||role=='4'||role=='10')),role,i)}
                        </Col>
                        <Col span={12} >
                            <Row type="flex" align="middle">

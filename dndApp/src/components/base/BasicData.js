@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import {Row,Col} from 'antd'
-import { Menu, Icon, Breadcrumb ,Card ,Modal, Input,InputNumber,Form,Button,Select,Switch } from 'antd';
+import { Menu, Icon, Breadcrumb ,Card ,Modal, Input,InputNumber,Form,Button,Select,Switch,notification  } from 'antd';
 import {Router, Route, Link, hashHistory,IndexRedirect } from 'react-router';
 import * as CharacterActions from '../../actions/Character';
 import roleData from '../../asset/RoleData';
@@ -119,7 +119,10 @@ class BaseData extends Component {
         return value;
     }
     handleUpGrade(){
-
+        notification['warning']({
+            message: '功能正在开发中',
+            description: '升级流程正在开发中，现在请手动调整升级后的属性变化',
+        });
     }
     handleGetXp(){
         this.setState({xpModal:true});
