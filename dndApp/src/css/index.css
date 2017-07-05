@@ -61,3 +61,15 @@ p.label{
     width: 10px!important;
     height: 16px!important;
 }
+.ant-modal-title{
+    font-size: 1.3rem !important;
+}
+.ant-btn-lg span{
+    font-size: 1.1rem !important;
+}
+.ant-confirm-title{
+    font-size: 1.3rem !important;
+}
+.ant-confirm-content{
+    font-size: 1.1rem !important;
+}

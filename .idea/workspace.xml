@@ -5,11 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7ed9e5e-6c14-4610-ba48-7bfb05545562" name="默认" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dndApp/src/asset/ExpertiseData.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dndApp/src/components/base/language/ExpertiseModal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dndApp/src/components/base/language/Language.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dndApp/src/components/base/magic/MagicBook.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dndApp/src/utli/ExportData.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dndApp/src/utli/ImportData.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dndApp/src/components/base/Language.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/asset/MagicData.js" afterPath="$PROJECT_DIR$/dndApp/src/asset/MagicData.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/components/base/Magic.js" afterPath="$PROJECT_DIR$/dndApp/src/components/base/Magic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/components/base/Backpack.js" afterPath="$PROJECT_DIR$/dndApp/src/components/base/Backpack.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/components/base/BasicData.js" afterPath="$PROJECT_DIR$/dndApp/src/components/base/BasicData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/components/base/Sider.js" afterPath="$PROJECT_DIR$/dndApp/src/components/base/Sider.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/css/index.css" afterPath="$PROJECT_DIR$/dndApp/src/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/router/App.js" afterPath="$PROJECT_DIR$/dndApp/src/router/App.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/utli/Init.js" afterPath="$PROJECT_DIR$/dndApp/src/utli/Init.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dndApp/src/components/base/Magic.js" afterPath="$PROJECT_DIR$/dndApp/src/components/base/magic/Magic.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,128 +45,68 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dndApp/src/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.892857">
-              <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+            <state vertical-scroll-proportion="-9.678572">
+              <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Skill.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Skill.js">
+      <file leaf-file-name="ExpertiseData.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dndApp/src/asset/ExpertiseData.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="223" column="35" selection-start-line="223" selection-start-column="35" selection-end-line="223" selection-end-column="35" />
-              <folding>
-                <marker date="1499070796747" expanded="true" signature="8694:9752" placeholder="&lt;xml/&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoleData.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dndApp/src/asset/RoleData.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+              <caret line="91" column="70" selection-start-line="91" selection-start-column="70" selection-end-line="91" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sider.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Sider.js">
+      <file leaf-file-name="ExpertiseModal.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/language/ExpertiseModal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="101" column="28" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.32220945">
+              <caret line="186" column="29" selection-start-line="186" selection-start-column="29" selection-end-line="186" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MagicData.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dndApp/src/asset/MagicData.js">
+      <file leaf-file-name="Language.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/language/Language.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="420" column="10" selection-start-line="420" selection-start-column="1" selection-end-line="420" selection-end-column="10" />
-              <folding>
-                <element signature="e#115#1018#0" expanded="false" />
-                <element signature="e#1030#2522#0" expanded="false" />
-                <element signature="e#2534#4677#0" expanded="false" />
-                <element signature="e#4689#6500#0" expanded="false" />
-                <element signature="e#6512#7789#0" expanded="false" />
-                <element signature="e#7801#8761#0" expanded="false" />
-                <element signature="e#8773#9991#0" expanded="false" />
-                <element signature="e#10032#10559#0" expanded="false" />
-                <element signature="e#10564#11829#0" expanded="false" />
-                <element signature="e#11834#13436#0" expanded="false" />
-                <element signature="e#13441#14980#0" expanded="false" />
-                <element signature="e#14985#16079#0" expanded="false" />
-                <element signature="e#16084#17230#0" expanded="false" />
-                <element signature="e#17235#18557#0" expanded="false" />
-                <element signature="e#18562#19472#0" expanded="false" />
-                <element signature="e#19477#20353#0" expanded="false" />
-                <element signature="e#20358#20852#0" expanded="false" />
-                <element signature="e#21015#21483#0" expanded="false" />
-                <element signature="e#21578#22063#0" expanded="false" />
-                <element signature="e#22153#22689#0" expanded="false" />
-                <element signature="e#22864#23340#0" expanded="false" />
-                <element signature="e#23487#23985#0" expanded="false" />
-                <element signature="e#24131#24597#0" expanded="false" />
-                <element signature="e#24683#25226#0" expanded="false" />
-                <element signature="e#25374#25918#0" expanded="false" />
-                <element signature="e#26019#26589#0" expanded="false" />
-                <element signature="e#26658#27230#0" expanded="false" />
-                <element signature="e#27319#27772#0" expanded="false" />
-                <element signature="e#27865#28400#0" expanded="false" />
-                <element signature="e#28545#29069#0" expanded="false" />
-                <element signature="e#29228#29678#0" expanded="false" />
-                <element signature="e#29815#30255#0" expanded="false" />
-                <element signature="e#30431#30899#0" expanded="false" />
-                <element signature="e#31042#31527#0" expanded="false" />
-                <element signature="e#31660#32165#0" expanded="false" />
-                <element signature="e#32343#32793#0" expanded="false" />
-                <element signature="e#32887#33348#0" expanded="false" />
-                <element signature="e#33513#33996#0" expanded="false" />
-                <element signature="e#34144#34583#0" expanded="false" />
-                <element signature="e#34622#35188#0" expanded="false" />
-                <element signature="e#35193#36192#0" expanded="false" />
-                <element signature="e#36197#37494#0" expanded="false" />
-                <element signature="e#37499#38548#0" expanded="false" />
-                <element signature="e#38553#39372#0" expanded="false" />
-                <element signature="e#39377#40272#0" expanded="false" />
-                <element signature="e#40277#41125#0" expanded="false" />
-                <element signature="e#41130#41733#0" expanded="false" />
-                <element signature="e#41738#42243#0" expanded="false" />
-                <element signature="e#42248#42747#0" expanded="false" />
-                <element signature="e#42821#43539#0" expanded="false" />
-                <element signature="e#43544#43994#0" expanded="false" />
-                <element signature="e#43999#44547#0" expanded="false" />
-                <element signature="e#44552#45043#0" expanded="false" />
-                <element signature="e#45077#45974#0" expanded="false" />
-                <element signature="e#45979#46583#0" expanded="false" />
-                <element signature="e#46588#47215#0" expanded="false" />
-                <element signature="e#47220#47556#0" expanded="false" />
-                <element signature="e#47610#48659#0" expanded="false" />
-                <element signature="e#48664#50949#0" expanded="false" />
-                <element signature="e#50954#53916#0" expanded="false" />
-                <element signature="e#53921#56427#0" expanded="false" />
-                <element signature="e#56432#58956#0" expanded="false" />
-                <element signature="e#58961#61508#0" expanded="false" />
-                <element signature="e#61513#64065#0" expanded="false" />
-                <element signature="e#64070#66143#0" expanded="false" />
-                <element signature="e#66148#68253#0" expanded="false" />
-                <element signature="e#68258#69675#0" expanded="false" />
-              </folding>
+              <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Magic.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Magic.js">
+      <file leaf-file-name="Magic.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/magic/Magic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7052506">
-              <caret line="103" column="29" selection-start-line="103" selection-start-column="29" selection-end-line="103" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="470" column="44" selection-start-line="470" selection-start-column="44" selection-end-line="470" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExportData.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dndApp/src/utli/ExportData.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImportData.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dndApp/src/utli/ImportData.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -165,27 +116,7 @@
         <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/BasicData.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="288" column="40" selection-start-line="288" selection-start-column="40" selection-end-line="288" selection-end-column="125" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Language.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Language.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="303" column="106" selection-start-line="303" selection-start-column="106" selection-end-line="303" selection-end-column="106" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Backpack.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Backpack.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="272" column="63" selection-start-line="272" selection-start-column="63" selection-end-line="272" selection-end-column="63" />
+              <caret line="172" column="36" selection-start-line="172" selection-start-column="36" selection-end-line="175" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -194,8 +125,8 @@
       <file leaf-file-name="Init.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dndApp/src/utli/Init.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.571428">
-              <caret line="38" column="94" selection-start-line="38" selection-start-column="94" selection-end-line="38" selection-end-column="94" />
+            <state vertical-scroll-proportion="-16.785715">
+              <caret line="34" column="102" selection-start-line="34" selection-start-column="102" selection-end-line="34" selection-end-column="102" />
               <folding />
             </state>
           </provider>
@@ -248,15 +179,22 @@
         <option value="$PROJECT_DIR$/dndApp/src/components/common/Stepper_ant.js" />
         <option value="$PROJECT_DIR$/dndApp/src/utli/Common.js" />
         <option value="$PROJECT_DIR$/dndApp/src/router/App.js" />
-        <option value="$PROJECT_DIR$/dndApp/src/components/base/Sider.js" />
-        <option value="$PROJECT_DIR$/dndApp/src/components/base/Backpack.js" />
-        <option value="$PROJECT_DIR$/dndApp/src/components/base/BasicData.js" />
-        <option value="$PROJECT_DIR$/dndApp/src/components/base/Language.js" />
         <option value="$PROJECT_DIR$/dndApp/src/components/base/Skill.js" />
         <option value="$PROJECT_DIR$/dndApp/src/asset/MagicData.js" />
-        <option value="$PROJECT_DIR$/dndApp/src/css/index.css" />
-        <option value="$PROJECT_DIR$/dndApp/src/utli/Init.js" />
         <option value="$PROJECT_DIR$/dndApp/src/components/base/Magic.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/css/index.css" />
+        <option value="$PROJECT_DIR$/dndApp/src/components/base/magic/MagicBook.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/components/base/BasicData.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/components/base/Backpack.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/components/base/Language.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/components/base/magic/Magic.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/asset/ExpertiseData.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/utli/Init.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/utli/ImportData.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/utli/ExportData.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/components/base/language/Language.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/components/base/language/ExpertiseModal.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/components/base/Sider.js" />
       </list>
     </option>
   </component>
@@ -321,6 +259,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -573,6 +513,66 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="haven2world.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="haven2world.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dndApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="language" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="haven2world.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="haven2world.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dndApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="asset" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -601,8 +601,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -622,10 +620,15 @@
     <property name="node.js.selected.package.standard" value="" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\myWorkspace\haven2world.github.io\dndApp\src\components\base\language" />
+      <recent name="E:\myWorkspace\haven2world.github.io\dndApp\src\components\base\magic" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\myWorkspace\haven2world.github.io\dndApp\src\utli" />
+      <recent name="E:\myWorkspace\haven2world.github.io\dndApp\src\components\base\language" />
       <recent name="E:\myWorkspace\haven2world.github.io\dndApp\src\asset" />
       <recent name="E:\myWorkspace\haven2world.github.io\dndApp\src\components\base" />
-      <recent name="E:\myWorkspace\haven2world.github.io\dndApp\src\utli" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -722,6 +725,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3409836" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -731,7 +735,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -751,56 +754,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dndApp/src/components/backTop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/utli/Init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/router/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Character.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/BasicData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="50" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dndApp/src/actions/Character.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1025,7 +983,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1033,15 +990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.087456845">
           <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/router/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.785714">
-          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1049,7 +997,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1063,14 +1010,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Backpack.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="272" column="63" selection-start-line="272" selection-start-column="63" selection-end-line="272" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dndApp/src/asset/RoleData.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1079,50 +1018,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Sider.js">
+    <entry file="file://$PROJECT_DIR$/dndApp/node_modules/antd/dist/antd-with-locales.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5322862">
+          <caret line="86475" column="24" selection-start-line="86475" selection-start-column="24" selection-end-line="86475" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/router/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69965476">
+          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Backpack.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="101" column="28" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="63" />
+          <caret line="360" column="65" selection-start-line="360" selection-start-column="65" selection-end-line="360" selection-end-column="65" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/css/index.css">
+    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/magic/MagicBook.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.892857">
-          <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Language.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="303" column="106" selection-start-line="303" selection-start-column="106" selection-end-line="303" selection-end-column="106" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/BasicData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="288" column="40" selection-start-line="288" selection-start-column="40" selection-end-line="288" selection-end-column="125" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/utli/Init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.571428">
-          <caret line="38" column="94" selection-start-line="38" selection-start-column="94" selection-end-line="38" selection-end-column="94" />
+        <state vertical-scroll-proportion="-0.22439586">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dndApp/src/asset/MagicData.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="420" column="10" selection-start-line="420" selection-start-column="1" selection-end-line="420" selection-end-column="10" />
+        <state vertical-scroll-proportion="3.4890678">
+          <caret line="1035" column="11" selection-start-line="1035" selection-start-column="7" selection-end-line="1035" selection-end-column="11" />
+          <caret line="1036" column="11" selection-start-line="1036" selection-start-column="7" selection-end-line="1036" selection-end-column="11" />
+          <caret line="1037" column="11" selection-start-line="1037" selection-start-column="7" selection-end-line="1037" selection-end-column="11" />
+          <caret line="1038" column="11" selection-start-line="1038" selection-start-column="7" selection-end-line="1038" selection-end-column="11" />
+          <caret line="1039" column="11" selection-start-line="1039" selection-start-column="7" selection-end-line="1039" selection-end-column="11" />
+          <caret line="1040" column="11" selection-start-line="1040" selection-start-column="7" selection-end-line="1040" selection-end-column="11" />
+          <caret line="1041" column="11" selection-start-line="1041" selection-start-column="7" selection-end-line="1041" selection-end-column="11" />
+          <caret line="1042" column="11" selection-start-line="1042" selection-start-column="7" selection-end-line="1042" selection-end-column="11" />
+          <caret line="1043" column="11" selection-start-line="1043" selection-start-column="7" selection-end-line="1043" selection-end-column="11" />
+          <caret line="1044" column="11" selection-start-line="1044" selection-start-column="7" selection-end-line="1044" selection-end-column="11" />
+          <caret line="1045" column="11" selection-start-line="1045" selection-start-column="7" selection-end-line="1045" selection-end-column="11" />
+          <caret line="1046" column="11" selection-start-line="1046" selection-start-column="7" selection-end-line="1046" selection-end-column="11" />
+          <caret line="1047" column="11" selection-start-line="1047" selection-start-column="7" selection-end-line="1047" selection-end-column="11" />
+          <caret line="1048" column="11" selection-start-line="1048" selection-start-column="7" selection-end-line="1048" selection-end-column="11" />
+          <caret line="1049" column="11" selection-start-line="1049" selection-start-column="7" selection-end-line="1049" selection-end-column="11" />
+          <caret line="1050" column="11" selection-start-line="1050" selection-start-column="7" selection-end-line="1050" selection-end-column="11" />
+          <caret line="1051" column="11" selection-start-line="1051" selection-start-column="7" selection-end-line="1051" selection-end-column="11" />
+          <caret line="1052" column="11" selection-start-line="1052" selection-start-column="7" selection-end-line="1052" selection-end-column="11" />
           <folding>
             <element signature="e#115#1018#0" expanded="false" />
             <element signature="e#1030#2522#0" expanded="false" />
@@ -1181,7 +1129,6 @@
             <element signature="e#45979#46583#0" expanded="false" />
             <element signature="e#46588#47215#0" expanded="false" />
             <element signature="e#47220#47556#0" expanded="false" />
-            <element signature="e#47610#48659#0" expanded="false" />
             <element signature="e#48664#50949#0" expanded="false" />
             <element signature="e#50954#53916#0" expanded="false" />
             <element signature="e#53921#56427#0" expanded="false" />
@@ -1195,10 +1142,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Magic.js">
+    <entry file="file://$PROJECT_DIR$/dndApp/src/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7052506">
-          <caret line="103" column="29" selection-start-line="103" selection-start-column="29" selection-end-line="103" selection-end-column="29" />
+        <state vertical-scroll-proportion="-9.678572">
+          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/BasicData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="172" column="36" selection-start-line="172" selection-start-column="36" selection-end-line="175" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/utli/Init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.785715">
+          <caret line="34" column="102" selection-start-line="34" selection-start-column="102" selection-end-line="34" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/utli/ImportData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/utli/ExportData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/asset/ExpertiseData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="91" column="70" selection-start-line="91" selection-start-column="70" selection-end-line="91" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/language/Language.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/magic/Magic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="470" column="44" selection-start-line="470" selection-start-column="44" selection-end-line="470" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Sider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7813579">
+          <caret line="76" column="73" selection-start-line="76" selection-start-column="73" selection-end-line="76" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/language/ExpertiseModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32220945">
+          <caret line="186" column="29" selection-start-line="186" selection-start-column="29" selection-end-line="186" selection-end-column="29" />
           <folding />
         </state>
       </provider>

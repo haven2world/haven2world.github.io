@@ -448,11 +448,11 @@ class BaseData extends Component {
                                 <InputNumber value={dnd.xp} className="input"
                                          onChange={(v)=>{this.onChangeNum('xp',v)}}></InputNumber>
                             </Col>
-                            <Col span={5}>
-                                <Button size="large" onClick={()=>{this.handleGetXp()}} >获得经验</Button>
-                            </Col>
-                            <Col span={8} >
-                                <Button size="large" onClick={()=>{this.handleUpGrade()}} >升级</Button>
+                            <Col span={13}>
+                                <Button.Group>
+                                    <Button size="large" onClick={()=>{this.handleGetXp()}} >获得经验</Button>
+                                    <Button size="large" onClick={()=>{this.handleUpGrade()}} >升级</Button>
+                                </Button.Group>
                             </Col>
                         </Row>
                         <div className="littleInterval"></div>
@@ -527,7 +527,7 @@ class BaseData extends Component {
                 <div className="littleInterval"></div>
                 <Row type="flex" align="middle">
                     <Col span={2} >
-                        <p className="label">武器</p>
+                        <p className="label"><strong>武器</strong></p>
                     </Col>
                     <Col span={6} >
                         <p className="label">基本攻击加值</p>

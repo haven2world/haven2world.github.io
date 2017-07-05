@@ -111,7 +111,7 @@ class Backpack extends Component {
                     <div className="littleInterval"></div>
                     <Row type="flex" align="middle">
                         <Col span={2}>
-                            <p className="label">盔甲</p>
+                            <p className="label"><strong>盔甲</strong></p>
                         </Col>
                         <Col span={6}>
                             <Input size="large"  className="input"
@@ -171,7 +171,7 @@ class Backpack extends Component {
                     <div className="littleInterval"></div>
                     <Row type="flex" align="middle">
                         <Col span={2}>
-                            <p className="label">盾牌</p>
+                            <p className="label"><strong>盾牌</strong></p>
                         </Col>
                         <Col span={6}>
                             <Input size="large"  className="input"
@@ -216,7 +216,7 @@ class Backpack extends Component {
                     <div className="littleInterval"></div>
                     <Row type="flex" align="middle">
                         <Col span={2}>
-                            <p className="label">防具</p>
+                            <p className="label"><strong>防具</strong></p>
                         </Col>
                         <Col span={6}>
                             <Input size="large"  className="input"
@@ -252,7 +252,7 @@ class Backpack extends Component {
                     <div className="littleInterval"></div>
                     <Row type="flex" align="middle">
                         <Col span={2}>
-                            <p className="label">防具</p>
+                            <p className="label"><strong>防具</strong></p>
                         </Col>
                         <Col span={6}>
                             <Input size="large"  className="input"
@@ -334,7 +334,7 @@ class Backpack extends Component {
                 <div className="littleInterval"></div>
                 <div className="littleInterval"></div>
                 <Row type="flex" align="middle" >
-                    <Col span={2}><p className="label">金钱</p></Col>
+                    <Col span={2}><p className="label"><strong>金钱</strong></p></Col>
                     <Col span={1}><p className="label">金</p></Col>
                     <Col span={5}>
                         <Stepper value={Math.floor(dnd.money/100)}
@@ -358,7 +358,7 @@ class Backpack extends Component {
                     </Col>
                 </Row>
                 <Row type="flex" align="middle" >
-                    <Col span={2}><p className="label">背包</p></Col>
+                    <Col span={2}><p className="label"><strong>背包</strong></p></Col>
                     <Col span={5} ><p className="label">总负重:&nbsp;&nbsp;{getWeight(dnd)}&nbsp;磅</p></Col>
                 </Row>
                 <div className="littleInterval"></div>

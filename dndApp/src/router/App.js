@@ -8,9 +8,9 @@ import character from '../components/base/Character';
 import init from '../utli/Init';
 import BasicData from '../components/base/BasicData';
 import Backpack from '../components/base/Backpack';
-import Language from '../components/base/Language';
+import Language from '../components/base/language/Language';
 import Skill from '../components/base/Skill';
-import Magic from '../components/base/Magic';
+import Magic from '../components/base/magic/Magic';
 
 const storeInstance = store();
 if(!localStorage.initFlag){
