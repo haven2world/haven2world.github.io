@@ -10,6 +10,7 @@ import { Row,Col,Menu, Icon, Breadcrumb ,Card ,Modal, Input,InputNumber,Form,But
 import {Router, Route, Link, hashHistory,IndexRedirect } from 'react-router';
 import * as CharacterActions from '../../../actions/Character';
 import magicData from '../../../asset/MagicData';
+import magicAmountData from '../../../asset/MagicAmountData';
 import roleData from '../../../asset/RoleData';
 import Stepper from '../../common/Stepper_ant';
 import {getAttrAdjustValue} from '../../../utli/Common';
@@ -25,6 +26,7 @@ class Magic extends Component {
         let magicList = [null,null,[[{"id":0}],[],[],[],[],[],[]],{"magic":[[{"id":0,"ready":false}],[],[],[],[],[],[],[],[],[]],"field":[{"id":0,"magic":[{"ready":false},{"ready":false},{"ready":false},{"ready":false},{"ready":false},{"ready":false},{"ready":false},{"ready":false},{"ready":false}]},{"id":1,"magic":[{"ready":false},{"ready":false},{"ready":false},{"ready":false},{"ready":false},{"ready":false},{"ready":false},{"ready":false},{"ready":false}]}]},[[{"id":0}],[],[],[],[],[],[],[],[],[]],null,null,[[{"id":0,"ready":false}],[],[],[]],[[{"id":0,"ready":false}],[],[],[]],null,[[{"id":0,"ready":false}],[],[],[],[],[],[],[],[],[]]];
         this.state = {
             magicList,
+            magicAmountList:[null, null, [0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0,0], null, null, [0,0,0,0], [0,0,0,0], null,[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0]],
             role:[],
             visible:false,
             magicBookProps:{
@@ -43,8 +45,9 @@ class Magic extends Component {
 
         let role = JSON.parse(dnd.role);
         let magicList = JSON.parse(dnd.magicList);
+        let magicAmountList = JSON.parse(dnd.magicAmountList);
 
-        this.setState({role,magicList});
+        this.setState({role,magicList,magicAmountList});
     }
     componentWillUnmount() {
     }
@@ -57,7 +60,20 @@ class Magic extends Component {
         let actions = this.props.actions;
         actions.updateCharacter(key,v);
     }
+    onChangeMagicAmountList(){
+        let actions = this.props.actions;
+        let v = JSON.stringify(this.state.magicAmountList);
+        actions.updateCharacter('magicAmountList',v);
+    }
+    onChangeMagicAmountItem(role,grade,v){
+        let magicAmountList = this.state.magicAmountList;
 
+        magicAmountList[role][grade] = v;
+
+        this.state.magicAmountList = magicAmountList;
+        this.setState({magicAmountList});
+        this.onChangeMagicAmountList();
+    }
     onChangeMagicList(){
         let actions = this.props.actions;
         let v = JSON.stringify(this.state.magicList);
@@ -202,9 +218,8 @@ class Magic extends Component {
             '四级法术',
         ];
         let dataIndex = role=='11'?'10':role;
-
         let temp = magicGrades.map((k,i)=>{
-
+            console.log(i,magicData[dataIndex])
             return(
                 <div key={i}>
                     <Row type="flex" align="start">
@@ -224,15 +239,11 @@ class Magic extends Component {
                         <Col span={12} >
                             <Row type="flex" align="middle">
                                 <Col span={24} >
-                                    <p className="label" style={{textAlign:'center'}}>当前等级可用的{k}</p>
+                                    <p className="label" style={{textAlign:'center'}}>当前等级每日可用的{k}数量</p>
                                 </Col>
                             </Row>
                             <div className="littleInterval"></div>
-                            <Row type="flex" align="middle">
-                                <Col span={24} >
-                                    <p className="label" style={{textAlign:'center'}}>正在整理数据与开发中</p>
-                                </Col>
-                            </Row>
+                            {this.renderMagicAmount(role,i)}
 
                         </Col>
                     </Row>
@@ -275,15 +286,11 @@ class Magic extends Component {
                         <Col span={12} >
                             <Row type="flex" align="middle">
                                 <Col span={24} >
-                                    <p className="label" style={{textAlign:'center'}}>当前等级可用的{k}</p>
+                                    <p className="label" style={{textAlign:'center'}}>当前等级每日可用的{k}数量</p>
                                 </Col>
                             </Row>
                             <div className="littleInterval"></div>
-                            <Row type="flex" align="middle">
-                                <Col span={24} >
-                                    <p className="label" style={{textAlign:'center'}}>正在整理数据与开发中</p>
-                                </Col>
-                            </Row>
+                            {this.renderMagicAmount(role,i)}
 
                         </Col>
                     </Row>
@@ -330,11 +337,11 @@ class Magic extends Component {
                        <Col span={12} >
                            <Row type="flex" align="middle">
                                <Col span={24} >
-                                   <p className="label" style={{textAlign:'center'}}>当前等级可用的{k}</p>
+                                   <p className="label" style={{textAlign:'center'}}>当前等级每日可用的{k}数量</p>
                                </Col>
                            </Row>
                            <div className="littleInterval"></div>
-
+                            {this.renderMagicAmount(role,i)}
                        </Col>
                    </Row>
                    <div className="littleInterval"></div>
@@ -377,8 +384,29 @@ class Magic extends Component {
         });
         return temp;
     }
-    renderMagicAmount(role){
+    renderMagicAmount(role,grade){
 
+      let roleGrade = 0;
+      this.state.role.forEach((k,i)=>{
+        if(k.role == role){
+          roleGrade = k.grade;
+        }
+      });
+        return(
+            <Row type="flex" align="middle">
+                <Col span={10}>
+                    <p className="text" >基础: {magicAmountData[role][roleGrade][grade]==-1?'-':magicAmountData[role][roleGrade][grade]}  + 额外法术</p>
+                </Col>
+
+                <Col span={10}>
+                    <Stepper value={this.state.magicAmountList[role][grade]}
+                             onChange={(v)=>{this.onChangeMagicAmountItem(role,grade,v)}}></Stepper>
+                </Col>
+                <Col span={4}>
+                    <p className="text" >={magicAmountData[role][roleGrade][grade]==-1?0:(magicAmountData[role][roleGrade][grade]+this.state.magicAmountList[role][grade])}</p>
+                </Col>
+            </Row>
+        )
     }
 
 

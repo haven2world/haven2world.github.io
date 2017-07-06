@@ -13,10 +13,9 @@ import Skill from '../components/base/Skill';
 import Magic from '../components/base/magic/Magic';
 
 const storeInstance = store();
-if(!localStorage.initFlag){
+
 	init();
 
-}
 
 export default class App extends Component {
 	constructor(){

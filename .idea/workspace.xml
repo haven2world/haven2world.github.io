@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e7ed9e5e-6c14-4610-ba48-7bfb05545562" name="默认" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/dist/index.js" afterPath="$PROJECT_DIR$/dndApp/dist/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/asset/MagicData.js" afterPath="$PROJECT_DIR$/dndApp/src/asset/MagicData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/components/base/Sider.js" afterPath="$PROJECT_DIR$/dndApp/src/components/base/Sider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/components/base/magic/Magic.js" afterPath="$PROJECT_DIR$/dndApp/src/components/base/magic/Magic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/router/App.js" afterPath="$PROJECT_DIR$/dndApp/src/router/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/utli/Init.js" afterPath="$PROJECT_DIR$/dndApp/src/utli/Init.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,21 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ExpertiseData.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dndApp/src/asset/ExpertiseData.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="91" column="70" selection-start-line="91" selection-start-column="70" selection-end-line="91" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ExpertiseModal.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/language/ExpertiseModal.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="195" column="35" selection-start-line="195" selection-start-column="35" selection-end-line="195" selection-end-column="35" />
+              <caret line="204" column="35" selection-start-line="204" selection-start-column="35" selection-end-line="204" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -61,7 +57,27 @@
         <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/magic/Magic.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="487" column="35" selection-start-line="487" selection-start-column="35" selection-end-line="487" selection-end-column="35" />
+              <caret line="221" column="46" selection-start-line="221" selection-start-column="46" selection-end-line="221" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MagicData.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dndApp/src/asset/MagicData.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8250863">
+              <caret line="1022" column="1" selection-start-line="1022" selection-start-column="1" selection-end-line="1022" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MagicAmountData.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dndApp/src/asset/MagicAmountData.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="84" column="31" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -71,8 +87,15 @@
         <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/magic/MagicBook.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="80" column="19" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="58" />
-              <folding />
+              <caret line="86" column="19" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="19" />
+              <folding>
+                <marker date="1499320831192" expanded="true" signature="555:693" placeholder="{...}" />
+                <marker date="1499320831192" expanded="true" signature="593:687" placeholder="{&quot;visible&quot;: false...}" />
+                <marker date="1499320831192" expanded="true" signature="755:763" placeholder="{...}" />
+                <marker date="1499320831192" expanded="true" signature="806:901" placeholder="{...}" />
+                <marker date="1499320831192" expanded="true" signature="860:901" placeholder="{...}" />
+                <marker date="1499320831192" expanded="true" signature="3565:3809" placeholder="&lt;xml/&gt;" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,19 +103,61 @@
       <file leaf-file-name="ExportData.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dndApp/src/utli/ExportData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-23.928572">
+            <state vertical-scroll-proportion="0.0">
               <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sider.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Sider.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Sider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5253456">
-              <caret line="84" column="57" selection-start-line="84" selection-start-column="57" selection-end-line="84" selection-end-column="57" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="86" column="46" selection-start-line="86" selection-start-column="46" selection-end-line="86" selection-end-column="46" />
+              <folding>
+                <marker date="1499331147839" expanded="true" signature="493:638" placeholder="{...}" />
+                <marker date="1499331147839" expanded="true" signature="527:632" placeholder="{&quot;exportVisible&quot;: false...}" />
+                <marker date="1499331147839" expanded="true" signature="735:1066" placeholder="{...}" />
+                <marker date="1499331147839" expanded="true" signature="791:1057" placeholder="{&quot;title&quot;: '重置为默认属性'...}" />
+                <marker date="1499331147839" expanded="true" signature="887:1019" placeholder="{...}" />
+                <marker date="1499331147839" expanded="true" signature="1085:1136" placeholder="{...}" />
+                <marker date="1499331147839" expanded="true" signature="1155:1206" placeholder="{...}" />
+                <marker date="1499331147839" expanded="true" signature="1235:1336" placeholder="{...}" />
+                <marker date="1499331147839" expanded="true" signature="1283:1328" placeholder="{&quot;exportVisible&quot;: false...}" />
+                <marker date="1499331147839" expanded="true" signature="1369:1470" placeholder="{...}" />
+                <marker date="1499331147839" expanded="true" signature="1417:1462" placeholder="{&quot;exportVisible&quot;: false...}" />
+                <marker date="1499331147839" expanded="true" signature="1499:1716" placeholder="{...}" />
+                <marker date="1499331147839" expanded="true" signature="1663:1708" placeholder="{&quot;importVisible&quot;: false...}" />
+                <marker date="1499331147839" expanded="true" signature="1749:1850" placeholder="{...}" />
+                <marker date="1499331147839" expanded="true" signature="1797:1842" placeholder="{&quot;importVisible&quot;: false...}" />
+                <marker date="1499331147839" expanded="true" signature="1872:1932" placeholder="{...}" />
+                <marker date="1499331147839" expanded="true" signature="1956:2382" placeholder="{...}" />
+                <marker date="1499331147839" expanded="true" signature="1986:2366" placeholder="&lt;xml/&gt;" />
+                <marker date="1499331147839" expanded="true" signature="2406:2857" placeholder="{...}" />
+                <marker date="1499331147839" expanded="true" signature="2436:2841" placeholder="&lt;xml/&gt;" />
+                <marker date="1499331147839" expanded="true" signature="2871:6870" placeholder="{...}" />
+                <marker date="1499331147839" expanded="true" signature="3037:3585" placeholder="{...}" />
+                <marker date="1499331147839" expanded="true" signature="3085:3575" placeholder="{...}" />
+                <marker date="1499331147839" expanded="true" signature="3726:6792" placeholder="&lt;xml/&gt;" />
+                <marker date="1499331147839" expanded="true" signature="3979:5684" placeholder="&lt;xml/&gt;" />
+                <marker date="1499331147839" expanded="true" signature="4063:4362" placeholder="&lt;xml/&gt;" />
+                <marker date="1499331147839" expanded="true" signature="4111:4325" placeholder="&lt;xml/&gt;" />
+                <marker date="1499331147839" expanded="true" signature="4387:4683" placeholder="&lt;xml/&gt;" />
+                <marker date="1499331147839" expanded="true" signature="4435:4646" placeholder="&lt;xml/&gt;" />
+                <marker date="1499331147839" expanded="true" signature="4708:5006" placeholder="&lt;xml/&gt;" />
+                <marker date="1499331147839" expanded="true" signature="4756:4969" placeholder="&lt;xml/&gt;" />
+                <marker date="1499331147839" expanded="true" signature="5031:5331" placeholder="&lt;xml/&gt;" />
+                <marker date="1499331147839" expanded="true" signature="5079:5294" placeholder="&lt;xml/&gt;" />
+                <marker date="1499331147839" expanded="true" signature="5356:5656" placeholder="&lt;xml/&gt;" />
+                <marker date="1499331147839" expanded="true" signature="5404:5619" placeholder="&lt;xml/&gt;" />
+                <marker date="1499331147839" expanded="true" signature="5705:6054" placeholder="&lt;xml/&gt;" />
+                <marker date="1499331147839" expanded="true" signature="5766:6027" placeholder="&lt;xml/&gt;" />
+                <marker date="1499331147839" expanded="true" signature="6075:6408" placeholder="&lt;xml/&gt;" />
+                <marker date="1499331147839" expanded="true" signature="6136:6381" placeholder="&lt;xml/&gt;" />
+                <marker date="1499331147839" expanded="true" signature="6429:6764" placeholder="&lt;xml/&gt;" />
+                <marker date="1499331147839" expanded="true" signature="6490:6737" placeholder="&lt;xml/&gt;" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,23 +172,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasicData.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/BasicData.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="176" column="36" selection-start-line="175" selection-start-column="36" selection-end-line="178" selection-end-column="45" />
-              <folding>
-                <marker date="1499304036012" expanded="true" signature="3593:3599" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Init.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dndApp/src/utli/Init.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="102" selection-start-line="34" selection-start-column="102" selection-end-line="34" selection-end-column="102" />
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -177,14 +230,12 @@
         <option value="$PROJECT_DIR$/dndApp/src/utli/Common.js" />
         <option value="$PROJECT_DIR$/dndApp/src/router/App.js" />
         <option value="$PROJECT_DIR$/dndApp/src/components/base/Skill.js" />
-        <option value="$PROJECT_DIR$/dndApp/src/asset/MagicData.js" />
         <option value="$PROJECT_DIR$/dndApp/src/components/base/Magic.js" />
         <option value="$PROJECT_DIR$/dndApp/src/css/index.css" />
         <option value="$PROJECT_DIR$/dndApp/src/components/base/magic/MagicBook.js" />
         <option value="$PROJECT_DIR$/dndApp/src/components/base/BasicData.js" />
         <option value="$PROJECT_DIR$/dndApp/src/components/base/Backpack.js" />
         <option value="$PROJECT_DIR$/dndApp/src/components/base/Language.js" />
-        <option value="$PROJECT_DIR$/dndApp/src/components/base/magic/Magic.js" />
         <option value="$PROJECT_DIR$/dndApp/src/asset/ExpertiseData.js" />
         <option value="$PROJECT_DIR$/dndApp/src/utli/Init.js" />
         <option value="$PROJECT_DIR$/dndApp/src/components/base/language/Language.js" />
@@ -192,6 +243,8 @@
         <option value="$PROJECT_DIR$/dndApp/src/utli/ExportData.js" />
         <option value="$PROJECT_DIR$/dndApp/src/utli/ImportData.js" />
         <option value="$PROJECT_DIR$/dndApp/src/components/base/Sider.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/components/base/magic/Magic.js" />
+        <option value="$PROJECT_DIR$/dndApp/src/asset/MagicData.js" />
       </list>
     </option>
   </component>
@@ -257,6 +310,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -597,7 +651,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -711,7 +764,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17544784" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -756,13 +809,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dndApp/src/actions/Character.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dndApp/src/reducer/CharacterReducers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1007,7 +1053,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1033,35 +1078,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/asset/MagicData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.4890678">
-          <caret line="1035" column="11" selection-start-line="1035" selection-start-column="7" selection-end-line="1035" selection-end-column="11" />
-          <caret line="1036" column="11" selection-start-line="1036" selection-start-column="7" selection-end-line="1036" selection-end-column="11" />
-          <caret line="1037" column="11" selection-start-line="1037" selection-start-column="7" selection-end-line="1037" selection-end-column="11" />
-          <caret line="1038" column="11" selection-start-line="1038" selection-start-column="7" selection-end-line="1038" selection-end-column="11" />
-          <caret line="1039" column="11" selection-start-line="1039" selection-start-column="7" selection-end-line="1039" selection-end-column="11" />
-          <caret line="1040" column="11" selection-start-line="1040" selection-start-column="7" selection-end-line="1040" selection-end-column="11" />
-          <caret line="1041" column="11" selection-start-line="1041" selection-start-column="7" selection-end-line="1041" selection-end-column="11" />
-          <caret line="1042" column="11" selection-start-line="1042" selection-start-column="7" selection-end-line="1042" selection-end-column="11" />
-          <caret line="1043" column="11" selection-start-line="1043" selection-start-column="7" selection-end-line="1043" selection-end-column="11" />
-          <caret line="1044" column="11" selection-start-line="1044" selection-start-column="7" selection-end-line="1044" selection-end-column="11" />
-          <caret line="1045" column="11" selection-start-line="1045" selection-start-column="7" selection-end-line="1045" selection-end-column="11" />
-          <caret line="1046" column="11" selection-start-line="1046" selection-start-column="7" selection-end-line="1046" selection-end-column="11" />
-          <caret line="1047" column="11" selection-start-line="1047" selection-start-column="7" selection-end-line="1047" selection-end-column="11" />
-          <caret line="1048" column="11" selection-start-line="1048" selection-start-column="7" selection-end-line="1048" selection-end-column="11" />
-          <caret line="1049" column="11" selection-start-line="1049" selection-start-column="7" selection-end-line="1049" selection-end-column="11" />
-          <caret line="1050" column="11" selection-start-line="1050" selection-start-column="7" selection-end-line="1050" selection-end-column="11" />
-          <caret line="1051" column="11" selection-start-line="1051" selection-start-column="7" selection-end-line="1051" selection-end-column="11" />
-          <caret line="1052" column="11" selection-start-line="1052" selection-start-column="7" selection-end-line="1052" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dndApp/src/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1083,49 +1103,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/language/Language.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/language/ExpertiseModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="195" column="35" selection-start-line="195" selection-start-column="35" selection-end-line="195" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/utli/Init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="102" selection-start-line="34" selection-start-column="102" selection-end-line="34" selection-end-column="102" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/magic/Magic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="487" column="35" selection-start-line="487" selection-start-column="35" selection-end-line="487" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/magic/MagicBook.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="19" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="58" />
-          <folding />
+          <caret line="86" column="19" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="19" />
+          <folding>
+            <marker date="1499320831192" expanded="true" signature="555:693" placeholder="{...}" />
+            <marker date="1499320831192" expanded="true" signature="593:687" placeholder="{&quot;visible&quot;: false...}" />
+            <marker date="1499320831192" expanded="true" signature="755:763" placeholder="{...}" />
+            <marker date="1499320831192" expanded="true" signature="806:901" placeholder="{...}" />
+            <marker date="1499320831192" expanded="true" signature="860:901" placeholder="{...}" />
+            <marker date="1499320831192" expanded="true" signature="3565:3809" placeholder="&lt;xml/&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dndApp/src/utli/ExportData.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.928572">
+        <state vertical-scroll-proportion="0.0">
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
         </state>
@@ -1141,8 +1136,98 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/Sider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5253456">
-          <caret line="84" column="57" selection-start-line="84" selection-start-column="57" selection-end-line="84" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="46" selection-start-line="86" selection-start-column="46" selection-end-line="86" selection-end-column="46" />
+          <folding>
+            <marker date="1499331147839" expanded="true" signature="493:638" placeholder="{...}" />
+            <marker date="1499331147839" expanded="true" signature="527:632" placeholder="{&quot;exportVisible&quot;: false...}" />
+            <marker date="1499331147839" expanded="true" signature="735:1066" placeholder="{...}" />
+            <marker date="1499331147839" expanded="true" signature="791:1057" placeholder="{&quot;title&quot;: '重置为默认属性'...}" />
+            <marker date="1499331147839" expanded="true" signature="887:1019" placeholder="{...}" />
+            <marker date="1499331147839" expanded="true" signature="1085:1136" placeholder="{...}" />
+            <marker date="1499331147839" expanded="true" signature="1155:1206" placeholder="{...}" />
+            <marker date="1499331147839" expanded="true" signature="1235:1336" placeholder="{...}" />
+            <marker date="1499331147839" expanded="true" signature="1283:1328" placeholder="{&quot;exportVisible&quot;: false...}" />
+            <marker date="1499331147839" expanded="true" signature="1369:1470" placeholder="{...}" />
+            <marker date="1499331147839" expanded="true" signature="1417:1462" placeholder="{&quot;exportVisible&quot;: false...}" />
+            <marker date="1499331147839" expanded="true" signature="1499:1716" placeholder="{...}" />
+            <marker date="1499331147839" expanded="true" signature="1663:1708" placeholder="{&quot;importVisible&quot;: false...}" />
+            <marker date="1499331147839" expanded="true" signature="1749:1850" placeholder="{...}" />
+            <marker date="1499331147839" expanded="true" signature="1797:1842" placeholder="{&quot;importVisible&quot;: false...}" />
+            <marker date="1499331147839" expanded="true" signature="1872:1932" placeholder="{...}" />
+            <marker date="1499331147839" expanded="true" signature="1956:2382" placeholder="{...}" />
+            <marker date="1499331147839" expanded="true" signature="1986:2366" placeholder="&lt;xml/&gt;" />
+            <marker date="1499331147839" expanded="true" signature="2406:2857" placeholder="{...}" />
+            <marker date="1499331147839" expanded="true" signature="2436:2841" placeholder="&lt;xml/&gt;" />
+            <marker date="1499331147839" expanded="true" signature="2871:6870" placeholder="{...}" />
+            <marker date="1499331147839" expanded="true" signature="3037:3585" placeholder="{...}" />
+            <marker date="1499331147839" expanded="true" signature="3085:3575" placeholder="{...}" />
+            <marker date="1499331147839" expanded="true" signature="3726:6792" placeholder="&lt;xml/&gt;" />
+            <marker date="1499331147839" expanded="true" signature="3979:5684" placeholder="&lt;xml/&gt;" />
+            <marker date="1499331147839" expanded="true" signature="4063:4362" placeholder="&lt;xml/&gt;" />
+            <marker date="1499331147839" expanded="true" signature="4111:4325" placeholder="&lt;xml/&gt;" />
+            <marker date="1499331147839" expanded="true" signature="4387:4683" placeholder="&lt;xml/&gt;" />
+            <marker date="1499331147839" expanded="true" signature="4435:4646" placeholder="&lt;xml/&gt;" />
+            <marker date="1499331147839" expanded="true" signature="4708:5006" placeholder="&lt;xml/&gt;" />
+            <marker date="1499331147839" expanded="true" signature="4756:4969" placeholder="&lt;xml/&gt;" />
+            <marker date="1499331147839" expanded="true" signature="5031:5331" placeholder="&lt;xml/&gt;" />
+            <marker date="1499331147839" expanded="true" signature="5079:5294" placeholder="&lt;xml/&gt;" />
+            <marker date="1499331147839" expanded="true" signature="5356:5656" placeholder="&lt;xml/&gt;" />
+            <marker date="1499331147839" expanded="true" signature="5404:5619" placeholder="&lt;xml/&gt;" />
+            <marker date="1499331147839" expanded="true" signature="5705:6054" placeholder="&lt;xml/&gt;" />
+            <marker date="1499331147839" expanded="true" signature="5766:6027" placeholder="&lt;xml/&gt;" />
+            <marker date="1499331147839" expanded="true" signature="6075:6408" placeholder="&lt;xml/&gt;" />
+            <marker date="1499331147839" expanded="true" signature="6136:6381" placeholder="&lt;xml/&gt;" />
+            <marker date="1499331147839" expanded="true" signature="6429:6764" placeholder="&lt;xml/&gt;" />
+            <marker date="1499331147839" expanded="true" signature="6490:6737" placeholder="&lt;xml/&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/utli/Init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/asset/MagicAmountData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="31" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/language/ExpertiseModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="204" column="35" selection-start-line="204" selection-start-column="35" selection-end-line="204" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/language/Language.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/components/base/magic/Magic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="221" column="46" selection-start-line="221" selection-start-column="46" selection-end-line="221" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dndApp/src/asset/MagicData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8250863">
+          <caret line="1022" column="1" selection-start-line="1022" selection-start-column="1" selection-end-line="1022" selection-end-column="1" />
           <folding />
         </state>
       </provider>

@@ -923,7 +923,7 @@ magic:[
     null,
     //圣武士
     {
-        1:[{name:'祝福术',introduction:'同伴获得+1攻击检定，+1抗恐惧豁免检定。'},
+        0:[{name:'祝福术',introduction:'同伴获得+1攻击检定，+1抗恐惧豁免检定。'},
 {name:'祝福圣水',introduction:'造出圣水。'},
 {name:'祝福武器',introduction:'使武器可对邪恶敌人造成痛击。'},
 {name:'造水术',introduction:'每等级可造出2加仑纯水。'},
@@ -939,7 +939,7 @@ magic:[
 {name:'次级复原术',introduction:'解除所有魔法属性减值，或回复1d4属性伤害。'},
 {name:'恩赐',introduction:'受术者获得1点暂时生命值。'},],
 
-2:[{name:'蛮力术',introduction:'受术者获得+4力量加值，持续时间为每等级1分钟。'},
+1:[{name:'蛮力术',introduction:'受术者获得+4力量加值，持续时间为每等级1分钟。'},
 {name:'减缓毒性',introduction:'使毒性停止对受术者造成伤害，每等级可持续1小时。'},
 {name:'耀眼术',introduction:'受术者获得+4魅力加值，持续时间为每等级1分钟。'},
 {name:'博识术',introduction:'受术者获得+4睿智加值，持续时间为每等级1分钟。'},
@@ -949,7 +949,7 @@ magic:[
 {name:'隐匿阵营',introduction:'隐藏阵营24小时。'},
 {name:'诚实之域',introduction:'范围内的对象无法说谎。'},],
 
-3:[{name:'治疗中度伤',introduction:'治疗2d8点伤害，每等级再多治疗+1点，最高+10点。'},
+2:[{name:'治疗中度伤',introduction:'治疗2d8点伤害，每等级再多治疗+1点，最高+10点。'},
 {name:'昼明术',introduction:'产生半径60呎的亮光。'},
 {name:'测知谎言',introduction:'发觉蓄意的谎言。'},
 {name:'解除魔法',introduction:'使魔法效果或法术失效。'},
@@ -961,7 +961,7 @@ magic:[
 {name:'移除目盲／耳聋',introduction:'治疗正常或魔法造成的目盲及耳聋。'},
 {name:'移除诅咒',introduction:'移除物品或人身上的诅咒。'},],
 
-4:[{name:'破除结界',introduction:'破除受术者所带有的附加魔法、诅咒、石化，或解除其变化。'},
+3:[{name:'破除结界',introduction:'破除受术者所带有的附加魔法、诅咒、石化，或解除其变化。'},
 {name:'治疗重伤',introduction:'治疗3d8点伤害，每等级再多治疗+1点，最高+15点（圣武士的有效施法者等级为10级）。'},
 {name:'防死结界',introduction:'对死亡类法术与负能量效果免疫。'},
 {name:'反制混乱',introduction:'在对抗来自混乱阵营生物的攻击时，可获得+4加值。'},
@@ -973,7 +973,7 @@ magic:[
     },
     //游侠
     {
-        1:[{name:'魔法警报',introduction:'产生警报结界，持续时间为每等级2小时。'},
+        0:[{name:'魔法警报',introduction:'产生警报结界，持续时间为每等级2小时。'},
 {name:'动物使者',introduction:'将一只超小型动物送至指定地点。'},
 {name:'安抚动物',introduction:'安抚生命骰数总和为「2d4+施法者等级」的动物。'},
 {name:'魅惑动物',introduction:'使一个动物相信你是盟友。'},
@@ -993,7 +993,7 @@ magic:[
 {name:'动物交谈',introduction:'你可以与动物交谈。'},
 {name:'一级召唤盟友术',introduction:'呼唤生物共同作战。'},],
 
-2:[{name:'树肤术',introduction:'天生防具获得+2以上的增强加值。'},
+1:[{name:'树肤术',introduction:'天生防具获得+2以上的增强加值。'},
 {name:'坚韧术',introduction:'受术者获得+4体质加值，持续时间为每等级1分钟。'},
 {name:'轻灵术',introduction:'受术者获得+4敏捷加值，持续时间为每等级1分钟。'},
 {name:'治疗轻伤',introduction:'治疗1d8点伤害，每等级再多治疗+1点，最高+5点。'},
@@ -1006,7 +1006,7 @@ magic:[
 {name:'二级召唤盟友术',introduction:'呼唤生物共同作战。'},
 {name:'风墙术',introduction:'使箭矢、小生物及气体转向。'},],
 
-3:[{name:'命令植物',introduction:'影响一或多个植物型生物的动作。'},
+2:[{name:'命令植物',introduction:'影响一或多个植物型生物的动作。'},
 {name:'治疗中度伤',introduction:'治疗2d8点伤害，每等级再多治疗+1点，最高+10点。'},
 {name:'黑暗视觉',introduction:'在完全黑暗中可见距离60呎。'},
 {name:'植物凋零',introduction:'使一般植物变小并抑制生长。'},
@@ -1020,7 +1020,7 @@ magic:[
 {name:'树化术',introduction:'你看上去就像一棵树，持续时间为每等级1小时。'},
 {name:'水面行走',introduction:'目标行于水上如履实地。'},],
 
-4:[{name:'异变动物',introduction:'每2等级可使一个生物变成两倍大。'},
+3:[{name:'异变动物',introduction:'每2等级可使一个生物变成两倍大。'},
 {name:'问道自然',introduction:'每等级可了解1哩之内的地形。'},
 {name:'治疗重伤',introduction:'治疗3d8点伤害，每等级再多治疗+1点，最高+15点。'},
 {name:'行动自如',introduction:'受术者可以无视障碍物而如常行走。'},

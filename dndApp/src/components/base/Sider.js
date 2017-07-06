@@ -31,7 +31,7 @@ export default class CharacterSider extends Component{
             content: '初始化人物会丢失当前所有修改，要继续吗？',
             onOk() {
                 localStorage.initFlag = false;
-                init();
+                init(true);
                 actions.fetchCharacter();
             },
             onCancel() {},

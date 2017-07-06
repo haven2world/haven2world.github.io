@@ -1,4 +1,4 @@
-export default function initLocalStorage () {
+export default function initLocalStorage (method=false) {
 	// body...
 	let dnd = {};
 
@@ -41,13 +41,23 @@ export default function initLocalStorage () {
 
 	dnd.selectMagicRole = '0';
 	dnd.magicList = '[null,null,[[{"id":0}],[],[],[],[],[],[]],{"magic":[[{"id":0,"ready":false}],[],[],[],[],[],[],[],[],[]],"field":[{"id":0,"magic":[{"ready":false},{"ready":false},{"ready":false},{"ready":false},{"ready":false},{"ready":false},{"ready":false},{"ready":false},{"ready":false}]},{"id":1,"magic":[{"ready":false},{"ready":false},{"ready":false},{"ready":false},{"ready":false},{"ready":false},{"ready":false},{"ready":false},{"ready":false}]}]},[[{"id":0}],[],[],[],[],[],[],[],[],[]],null,null,[[{"id":0,"ready":false}],[],[],[]],[[{"id":0,"ready":false}],[],[],[]],null,[[{"id":0,"ready":false}],[],[],[],[],[],[],[],[],[]],[[{"id":0,"ready":false}],[],[],[],[],[],[],[],[],[]]]';
+	dnd.magicAmountList = '[null, null, [0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0,0], null, null, [0,0,0,0], [0,0,0,0], null,[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0]]'
 	dnd.specialization = '0';
 
 	dnd.languageList = `[{"name":"通用语"}]`;
 	dnd.expertiseList = '[{"class":"common","id":0,"remarks":""}]';
 
 
-	for(let i in dnd){
-		localStorage[i] = dnd[i];
+	if(method){
+		for(let i in dnd){
+			localStorage[i] = dnd[i];
+		}
+	}else{
+		for(let i in dnd){
+			if(!localStorage[i]){
+				localStorage[i] = dnd[i];
+			}			
+		}
 	}
+
 }
