@@ -75,6 +75,7 @@ export default class CharacterSider extends Component{
         this.setState({importValue:e.target.value});
     }
     renderExportModal(){
+        if(this.state.exportVisible)
         return(
             <Modal
                 title="导出数据"
@@ -89,6 +90,7 @@ export default class CharacterSider extends Component{
         )
     }
     renderImportModal(){
+        if(this.state.importVisible)
         return(
             <Modal
                 title="导出数据"

@@ -1,3 +1,5 @@
+let LZString = require('lz-string')
+
 export default function exportStorage () {
 	// body...
 	let dnd = {};
@@ -53,6 +55,7 @@ export default function exportStorage () {
 		dnd[i] = localStorage[i];
 	}
 
-	return JSON.stringify(dnd);
+	let result = LZString.compressToEncodedURIComponent(JSON.stringify(dnd));
+	return result;
 
 }
