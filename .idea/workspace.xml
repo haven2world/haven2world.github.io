@@ -4,13 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/dndApp/src/components/base/Backpack.js" line="49" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7ed9e5e-6c14-4610-ba48-7bfb05545562" name="默认" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/package.json" afterPath="$PROJECT_DIR$/dndApp/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/components/base/Sider.js" afterPath="$PROJECT_DIR$/dndApp/src/components/base/Sider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/utli/ExportData.js" afterPath="$PROJECT_DIR$/dndApp/src/utli/ExportData.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dndApp/src/utli/ImportData.js" afterPath="$PROJECT_DIR$/dndApp/src/utli/ImportData.js" />
-    </list>
+    <list default="true" id="e7ed9e5e-6c14-4610-ba48-7bfb05545562" name="默认" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
