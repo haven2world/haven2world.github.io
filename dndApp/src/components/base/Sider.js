@@ -1,15 +1,21 @@
 import React,{Component} from 'react';
 
-import { Layout, Menu, Icon, Breadcrumb ,Card ,Modal,Button,Row,Col} from 'antd';
+import { Layout, Menu, Icon, Breadcrumb ,Card ,Modal,Button,Row,Col,Input} from 'antd';
 import {Router, Route, Link, hashHistory,IndexRedirect } from 'react-router';
 import init from '../../utli/Init';
+import exportData from '../../utli/ExportData';
+import importData from '../../utli/ImportData';
 const { Header, Content, Footer, Sider } = Layout;
 const confirm = Modal.confirm;
 
 export default class CharacterSider extends Component{
     constructor(){
     super();
-
+        this.state={
+            exportVisible: false,
+            importVisible:false,
+            importValue:''
+        }
     }
 
     componentDidMount() {
@@ -31,6 +37,70 @@ export default class CharacterSider extends Component{
             onCancel() {},
         });
 
+    }
+    handleExport(){
+        this.setState({exportVisible:true})
+    }
+    handleImport(){
+        this.setState({importVisible:true})
+    }
+    handleExportOk = (e) => {
+        console.log(e);
+        this.setState({
+            exportVisible: false,
+        });
+    }
+    handleExportCancel = (e) => {
+        console.log(e);
+        this.setState({
+            exportVisible: false,
+        });
+    }
+    handleImportOk = (e) => {
+        console.log(e);
+        importData(this.state.importValue);
+        const {actions} = this.props;
+        actions.fetchCharacter();
+        this.setState({
+            importVisible: false,
+        });
+    }
+    handleImportCancel = (e) => {
+        console.log(e);
+        this.setState({
+            importVisible: false,
+        });
+    }
+    onChangeImport(e){
+        this.setState({importValue:e.target.value});
+    }
+    renderExportModal(){
+        return(
+            <Modal
+                title="导出数据"
+                visible={this.state.exportVisible}
+                onOk={this.handleExportOk}
+                onCancel={this.handleExportCancel}
+            >
+                <p className="text">完整复制以下字符串：(移动端可长按复制全部)</p>
+                <div className="littleInterval"></div>
+                <Input value={exportData()} />
+            </Modal>
+        )
+    }
+    renderImportModal(){
+        return(
+            <Modal
+                title="导出数据"
+                visible={this.state.importVisible}
+                onOk={this.handleImportOk}
+                onCancel={this.handleImportCancel}
+            >
+                <p className="text">完整粘贴导出的字符串：</p>
+                <div className="littleInterval"></div>
+                <Input defaultValue="" onChange={(e)=>{this.onChangeImport(e)}} />
+            </Modal>
+        )
     }
 
     render(){
@@ -57,6 +127,8 @@ export default class CharacterSider extends Component{
         }
         return(
             <Layout >
+                {this.renderExportModal()}
+                {this.renderImportModal()}
                 <Sider
                     breakpoint="lg"
                     collapsedWidth="0"
@@ -99,6 +171,18 @@ export default class CharacterSider extends Component{
                         <Button onClick={()=>{this.handleClearCharacter()}} size="large" style={{margin:'1rem'}}>
                             <Icon type="user-delete" className="text"  />
                             <span className="text">初始化人物</span>
+                        </Button>
+                    </Row>
+                    <Row type = 'flex' justify="center">
+                        <Button onClick={()=>{this.handleExport()}} size="large" style={{margin:'1rem'}}>
+                            <Icon type="upload" className="text"  />
+                            <span className="text">导出</span>
+                        </Button>
+                    </Row>
+                    <Row type = 'flex' justify="center">
+                        <Button onClick={()=>{this.handleImport()}} size="large" style={{margin:'1rem'}}>
+                            <Icon type="download" className="text"  />
+                            <span className="text">导入</span>
                         </Button>
                     </Row>
 

@@ -1,6 +1,7 @@
-export default function initLocalStorage () {
+export default function exportStorage () {
 	// body...
 	let dnd = {};
+
 
     dnd.initFlag = true;
 
@@ -47,7 +48,11 @@ export default function initLocalStorage () {
 	dnd.expertiseList = '[{"class":"common","id":0,"remarks":""}]';
 
 
+
 	for(let i in dnd){
-		localStorage[i] = dnd[i];
+		dnd[i] = localStorage[i];
 	}
+
+	return JSON.stringify(dnd);
+
 }
