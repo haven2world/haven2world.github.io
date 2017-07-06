@@ -30,21 +30,26 @@ export default class MagicBook extends Component{
 
     componentWillReceiveProps(nextProps) {
         if(!this.props.visible && nextProps.visible){
-            this.setState({visible:true});
+            this.setState({visible:true,chooseList:[],
+            chooseListMap:{}});
         }
     }
 
     handleOk = (e) => {
         this.setState({
-            visible: false,
+            visible: false,chooseList:[],
+            chooseListMap:{}
         });
         this.props.callback(this.state.chooseList);
+        this.modalKey++;
         this.props.onClose();
     }
     handleCancel = (e) => {
         this.setState({
-            visible: false,
+            visible: false,chooseList:[],
+            chooseListMap:{}
         });
+        this.modalKey++;
         this.props.onClose();
     }
     onChangeChoose(i,v){
@@ -91,6 +96,7 @@ export default class MagicBook extends Component{
         });
         return temp;
     }
+    modalKey = 0;
 
     render(){
         let magicGrades = [
@@ -113,6 +119,7 @@ export default class MagicBook extends Component{
 
         return(
             <Modal
+                key={this.modalKey}
                 title={title}
                 visible={this.state.visible}
                 onOk={this.handleOk}

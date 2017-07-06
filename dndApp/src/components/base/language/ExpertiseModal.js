@@ -30,21 +30,29 @@ export default class ExpertiseModal extends Component{
 
     componentWillReceiveProps(nextProps) {
         if(!this.props.visible && nextProps.visible){
-            this.setState({visible:true});
+            this.setState({visible:true, chooseList:[],
+            chooseListMap:{}});
         }
     }
 
     handleOk = (e) => {
         this.setState({
             visible: false,
+            chooseList:[],
+            chooseListMap:{}
         });
         this.props.callback(this.state.chooseList);
+        this.modalKey++;
         this.props.onClose();
+
     }
     handleCancel = (e) => {
         this.setState({
             visible: false,
+            chooseList:[],
+            chooseListMap:{}
         });
+        this.modalKey++;
         this.props.onClose();
     }
     onChangeChoose(i,v,cla){
@@ -177,13 +185,14 @@ export default class ExpertiseModal extends Component{
 
         return temp;
     }
-
+    modalKey=0;
     render(){
 
         let title='选择专长';
 
         return(
             <Modal
+                key={this.modalKey}
                 title={title}
                 visible={this.state.visible}
                 onOk={this.handleOk}

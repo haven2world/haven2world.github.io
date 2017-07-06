@@ -29,6 +29,11 @@ export default class Stepper extends Component{
         }
 
     }
+    onChange(v){
+        if(this.props.onChange){
+            this.props.onChange(v);
+        }
+    }
     render(){
         return (
             <div>
