@@ -14,6 +14,7 @@ import roleData from '../../asset/RoleData';
 import Stepper from '../common/Stepper_ant';
 import {getAttrAdjustValue} from '../../utli/Common';
 
+
 const Option = Select.Option;
 
 class BaseData extends Component {
@@ -123,6 +124,10 @@ class BaseData extends Component {
             message: '功能正在开发中',
             description: '升级流程正在开发中，现在请手动调整升级后的属性变化',
         });
+        this.setState({visible:true})
+    }
+    onUpGradeModalCallback(){
+        console.log('callback')
     }
     handleGetXp(){
         this.setState({xpModal:true});
@@ -373,6 +378,7 @@ class BaseData extends Component {
         return (
             <div className="contentWrapper">
                 {this.renderXpModal()}
+                {}
                 <Row type="flex" align="middle">
                     <Col span={2} >
                         <p className="label">姓名</p>
