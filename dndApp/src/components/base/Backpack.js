@@ -11,7 +11,7 @@ import { Menu, Icon, Breadcrumb ,Card ,Modal, Input,InputNumber,Form,Button,Sele
 import {Router, Route, Link, hashHistory,IndexRedirect } from 'react-router';
 import * as CharacterActions from '../../actions/Character';
 import Stepper from '../common/Stepper_ant';
-import {getWeight} from '../../utli/Common';
+import {getWeight,getWeightGrade} from '../../utli/Common';
 
 const Option = Select.Option;
 
@@ -360,6 +360,7 @@ class Backpack extends Component {
                 <Row type="flex" align="middle" >
                     <Col span={2}><p className="label"><strong>背包</strong></p></Col>
                     <Col span={5} ><p className="label">总负重:&nbsp;&nbsp;{getWeight(dnd)}&nbsp;磅</p></Col>
+                    <Col span={5} ><p className="label">{getWeightGrade(dnd).grade}</p></Col>
                 </Row>
                 <div className="littleInterval"></div>
                 {renderBackpack}
