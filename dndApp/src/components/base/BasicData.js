@@ -15,6 +15,7 @@ import Stepper from '../common/Stepper_ant';
 import {getAttrAdjustValue,getAttrFinal} from '../../utli/Common';
 import GradeUpModal from './GradeUp';
 
+
 const Option = Select.Option;
 
 class BaseData extends Component {
@@ -121,6 +122,10 @@ class BaseData extends Component {
             message: '功能正在开发中',
             description: '升级流程正在开发中，现在请手动调整升级后的属性变化',
         });
+        this.setState({visible:true})
+    }
+    onUpGradeModalCallback(){
+        console.log('callback')
     }
     handleGetXp(){
         this.setState({xpModal:true});
