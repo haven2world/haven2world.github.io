@@ -161,7 +161,7 @@ class Magic extends Component {
                        <Col span={3}> <p className="label" style={{}}>领域：</p></Col>
                        <Col span={3}>
                            <Select className="input" value={k.id.toString()} style={{width:'90%'}}
-                                   onSelect={(v,o)=>{this.onChangeFieldItem(i,'id',e.target.checked)}}>
+                                   onSelect={(v,o)=>{this.onChangeFieldItem(i,'id',v)}}>
                                {fieldOptions}
                            </Select>
                        </Col>
@@ -485,6 +485,10 @@ class Magic extends Component {
                 </Option>
             )
         });
+        let selectMagicRole = selectMagicRole?selectMagicRole.toString():'0';
+        if(parseInt(selectMagicRole)>=roleOptions.length ){
+            selectMagicRole = '0';
+        }
 
         let specializationList = [
             '无',
@@ -505,6 +509,8 @@ class Magic extends Component {
                 </Option>
             )
         });
+
+
         return (
             <div className="contentWrapper">
                 <MagicBook visible={this.state.visible} {...this.props} role={this.state.magicBookProps.role} grade={this.state.magicBookProps.grade}
@@ -514,17 +520,17 @@ class Magic extends Component {
                         <p className="label">拥有的职业</p>
                     </Col>
                     <Col span={6} >
-                        <Select className="input" value={dnd.selectMagicRole?dnd.selectMagicRole.toString():'0'} style={{width:'90%'}}
+                        <Select className="input" value={selectMagicRole} style={{width:'90%'}}
                                 onSelect={(v,o)=>{this.onChangeNum('selectMagicRole',parseInt(v))}}>
                             {roleOptions}
                         </Select>
                     </Col>
-                    {role.length?role[dnd.selectMagicRole].role.toString()!='11'?null:(
+                    {role.length?role[selectMagicRole].role.toString()!='11'?null:(
                         <Col span={4}>
                             <p className="label">专精</p>
                         </Col>
                     ):null}
-                    {role.length?role[dnd.selectMagicRole].role.toString()!='11'?null:(
+                    {role.length?role[selectMagicRole].role.toString()!='11'?null:(
                         <Col span={6} >
                             <Select className="input" value={dnd.specialization?dnd.specialization.toString():'0'} style={{width:'90%'}}
                                     onSelect={(v,o)=>{this.onChangeNum('specialization',parseInt(v))}}>
@@ -535,7 +541,7 @@ class Magic extends Component {
 
                 </Row>
                 <div className="littleInterval"></div>
-                {this.renderMagicList(role.length?role[dnd.selectMagicRole].role.toString():'0')}
+                {this.renderMagicList(role.length?role[selectMagicRole].role.toString():'0')}
 
 
             </div>
