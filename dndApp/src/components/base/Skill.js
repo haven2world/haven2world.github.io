@@ -122,9 +122,9 @@ class Skill extends Component {
                               }
                           })()}
                       </Col>
-                      <Col span={5}><p className="label" style={{textAlign:'left'}}>{da.name+(da.armorTest?" (-"+da.armorTest+") ":'')+(da.notTrained?" ■ ":"")}</p></Col>
+                      <Col span={5}><p className="label" style={(da.notTrained||k.skillGrade>0)?{textAlign:'left',fontWeight:'bold'}:{textAlign:'left',color:'rgba(0,0,0,0.5)'}}>{da.name+(da.armorTest?" (-"+da.armorTest+") ":'')+(da.notTrained?" ■ ":"")}</p></Col>
                       <Col span={4}>
-                          <p className="label" style={{textAlign:'center'}}>{da.attr?getAttrAdjustValue(dnd[da.attr]):0}</p>
+                          <p className="label" style={{textAlign:'center'}}>{da.attr?getAttrAdjustValue(dnd,da.attr):0}</p>
                       </Col>
                       <Col span={5}>
                           <Stepper value={k.skillGrade}
@@ -135,7 +135,7 @@ class Skill extends Component {
                                    onChange={(v)=>{this.onChangeSkillItem(i,'otherAdjust',v)}}></Stepper>
                       </Col>
                       <Col span={4}>
-                          <p className="label" style={{textAlign:'center'}}>{(da.notTrained||k.skillGrade>0)?((da.attr?getAttrAdjustValue(dnd[da.attr]):0 )+k.skillGrade+k.otherAdjust):0   }</p>
+                          <p className="label" style={{textAlign:'center'}}>{(da.notTrained||k.skillGrade>0)?((da.attr?getAttrAdjustValue(dnd,da.attr):0 )+k.skillGrade+k.otherAdjust):0   }</p>
                       </Col>
                   </Row>
               </div>
@@ -222,7 +222,15 @@ class Skill extends Component {
                 <div className="littleInterval"></div>
                 <Row type="flex" align="middle">
                     <Col span={5} >
-                        <p className="label" style={{textAlign:'center'}}>共效技能</p>
+                        <p className="label" style={{textAlign:'center'}}><strong>共效技能</strong></p>
+                    </Col>
+                </Row>
+                <Row type="flex" align="middle">
+                    <Col span={5} >
+                        <p className="label" style={{textAlign:'center'}}>等级>5</p>
+                    </Col>
+                    <Col span={19} >
+                        <p className="label" style={{textAlign:'left'}}>获得+2加值</p>
                     </Col>
                 </Row>
                 {(()=>{

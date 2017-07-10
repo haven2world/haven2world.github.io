@@ -12,7 +12,8 @@ import {Router, Route, Link, hashHistory,IndexRedirect } from 'react-router';
 import * as CharacterActions from '../../actions/Character';
 import roleData from '../../asset/RoleData';
 import Stepper from '../common/Stepper_ant';
-import {getAttrAdjustValue} from '../../utli/Common';
+import {getAttrAdjustValue,getAttrFinal} from '../../utli/Common';
+import GradeUpModal from './GradeUp';
 
 const Option = Select.Option;
 
@@ -20,6 +21,7 @@ class BaseData extends Component {
     constructor() {
         super();
         this.state = {
+            visible:false,
             role:[],
             xpModal:false,
             getXp:0,
@@ -114,10 +116,6 @@ class BaseData extends Component {
         this.setState({weaponList});
         this.onChangeWeaponList();
     }
-    getAttrFinal(key,value){
-
-        return value;
-    }
     handleUpGrade(){
         notification['warning']({
             message: '功能正在开发中',
@@ -146,6 +144,12 @@ class BaseData extends Component {
               <InputNumber className="input" value={this.state.getXp} onChange={(v)=>{this.setState({getXp:v});this.state.getXp=v;}} />
           </Modal>
         );
+    }
+    onGradeUpModal(){
+        this.setState({visible:true})
+    }
+    onGradeUpModalCallback(){
+
     }
     render() {
         let {dnd} = this.props.character;
@@ -261,10 +265,10 @@ class BaseData extends Component {
                                               onChange={(v)=>{this.onChangeNum(k.key,v)}}></Stepper>
                                  </Col>
                                  <Col span={4} >
-                                     <p className="label">{this.getAttrFinal(k.key,dnd[k.key])}</p>
+                                     <p className="label">{getAttrFinal(dnd,k.key)}</p>
                                  </Col>
                                  <Col span={6} >
-                                     <p className="label">{getAttrAdjustValue(dnd[k.key])}</p>
+                                     <p className="label">{getAttrAdjustValue(dnd,k.key)}</p>
                                  </Col>
                              </Row>
                              <div className="littleInterval"></div>
@@ -373,6 +377,7 @@ class BaseData extends Component {
         return (
             <div className="contentWrapper">
                 {this.renderXpModal()}
+                {GradeUpModal}
                 <Row type="flex" align="middle">
                     <Col span={2} >
                         <p className="label">姓名</p>
@@ -486,7 +491,7 @@ class BaseData extends Component {
                                 <p className="label">=></p>
                             </Col>
                             <Col span={4} >
-                                <p className="label">{10 + getAttrAdjustValue(dnd.dex) + parseInt(dnd.acArmor)}</p>
+                                <p className="label">{10 + getAttrAdjustValue(dnd,'dex') + parseInt(dnd.acArmor)}</p>
                             </Col>
                         </Row>
                         <div className="littleInterval"></div>
