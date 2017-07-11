@@ -66,7 +66,7 @@ export default class ExpertiseModal extends Component{
         this.setState({chooseList,chooseListMap});
     }
 
-    renderMagicBook(){
+    renderExpertiseModal(){
 
         let data = expertiseData;
         let temp1 = data.common.map((k,i)=>{
@@ -199,7 +199,7 @@ export default class ExpertiseModal extends Component{
                 onCancel={this.handleCancel}
                 width={document.documentElement.clientWidth-100}
             >
-                {this.renderMagicBook()}
+                {this.renderExpertiseModal()}
                 <Row type="flex" align="middle">
                     <Col span={1}/>
                     <Col span={23}>

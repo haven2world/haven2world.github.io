@@ -134,7 +134,7 @@ export default class CharacterSider extends Component{
                 <Sider
                     breakpoint="lg"
                     collapsedWidth="0"
-                    onCollapse={(collapsed, type) => { console.log(collapsed, type); }}
+                    onCollapse={(collapsed, type) => { /*console.log(collapsed, type);*/ }}
                 >
                     <div className="logo" />
                     <Menu theme="dark" mode="inline" selectedKeys={[selected]}>

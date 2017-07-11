@@ -12,8 +12,9 @@ import {Router, Route, Link, hashHistory,IndexRedirect } from 'react-router';
 import * as CharacterActions from '../../actions/Character';
 import skillData from '../../asset/SkillData';
 import coEffectData from '../../asset/CoEffectData';
+import xpDate from '../../asset/XpData';
 import Stepper from '../common/Stepper_ant';
-import {getAttrAdjustValue} from '../../utli/Common';
+import {getAttrAdjustValue,getTotalGrade} from '../../utli/Common';
 
 
 
@@ -189,13 +190,18 @@ class Skill extends Component {
                 {rendeSpecialSkill}
                 <div className="littleInterval"></div>
                 <Row type="flex" align="middle">
+
                     <Col span={2} >
-                        <p className="label">技能</p>
+                        <p className="text"><strong>技能</strong></p>
                     </Col>
                     <Col span={8} >
-                        <p className="label">当前最高技能级数</p>
+                        <p className="text" >本职技能最高等级 <strong style={{color:'rgba(16,142,233,0.7)'}}>{xpDate[getTotalGrade(dnd)].easySkillAmount}</strong></p>
+                    </Col>
+                    <Col span={8} >
+                        <p className="text" >非本职技能最高等级 <strong style={{color:'rgba(16,142,233,0.7)'}}>{xpDate[getTotalGrade(dnd)].hardSkillAmount}</strong></p>
                     </Col>
                 </Row>
+                <div className="littleInterval"></div>
                 <Row type="flex" align="middle">
                     <Col span={1} >
                         <p className="label">本职</p>

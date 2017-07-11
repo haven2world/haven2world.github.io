@@ -64,7 +64,22 @@ export function getAttrFinal(dnd,key){
 			return dnd[key];
 	}
 }
-export function getAttrAdjustValue (dnd,key) {
+export function getAttrAdjustValue (dnd,key,value) {
 	let v = getAttrFinal(dnd,key);
+	if(value){
+		v = value;
+	}
 	return Math.floor(v/2-5);
+}
+export function getTotalGrade (dnd) {
+	let v =0;
+
+	if(dnd.role){
+		let role = JSON.parse(dnd.role);
+		role.forEach((k,i)=>{
+			v += parseInt(k.grade);
+		});
+	}
+
+	return v;
 }

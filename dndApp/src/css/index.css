@@ -73,3 +73,6 @@ p.label{
 .ant-confirm-content{
     font-size: 1.1rem !important;
 }
+.ant-radio-button-wrapper span{
+    font-size: 1.1rem !important;
+}

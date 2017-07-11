@@ -11,8 +11,10 @@ import { Menu, Icon, Breadcrumb ,Card ,Modal, Input,InputNumber,Form,Button,Sele
 import {Router, Route, Link, hashHistory,IndexRedirect } from 'react-router';
 import * as CharacterActions from '../../actions/Character';
 import roleData from '../../asset/RoleData';
+import xpData from '../../asset/XpData';
+import attacData from '../../asset/AttacData';
 import Stepper from '../common/Stepper_ant';
-import {getAttrAdjustValue,getAttrFinal} from '../../utli/Common';
+import {getAttrAdjustValue,getAttrFinal,getTotalGrade} from '../../utli/Common';
 import GradeUpModal from './GradeUp';
 
 const Option = Select.Option;
@@ -26,6 +28,8 @@ class BaseData extends Component {
             xpModal:false,
             getXp:0,
             weaponList:[],
+            gradeUpProps:{
+            }
         }
     }
 
@@ -116,10 +120,45 @@ class BaseData extends Component {
         this.setState({weaponList});
         this.onChangeWeaponList();
     }
+
     handleUpGrade(){
         notification['warning']({
             message: '功能正在开发中',
             description: '升级流程正在开发中，现在请手动调整升级后的属性变化',
+        });
+        let errorText = '';
+        let {dnd} = this.props.character;
+        let gradeUpProps = this.state.gradeUpProps;
+        let grade = getTotalGrade(dnd);
+        let nowData = xpData[grade];
+        if(grade == 20){
+            errorText = '人物等级达到20级，后续升级请手动调整。'
+        }else{
+            let nextData = xpData[grade+1];
+
+            if(dnd.xp>=nextData.xp){
+
+                gradeUpProps.grade = grade;
+                gradeUpProps.nowData = nowData;
+                gradeUpProps.nextData = nextData;
+
+                this.setState({visible:true,gradeUpProps})
+                return;
+            }else{
+                errorText = '升级经验不足';
+            }
+        }
+
+        notification['warning']({
+            message: '无法进入升级流程',
+            description: errorText,
+        });
+
+    }
+    onGradeUpModalCallback(func){
+        console.log('callback')
+        func.forEach((k,i)=>{
+           k.func(k.props)
         });
     }
     handleGetXp(){
@@ -145,12 +184,7 @@ class BaseData extends Component {
           </Modal>
         );
     }
-    onGradeUpModal(){
-        this.setState({visible:true})
-    }
-    onGradeUpModalCallback(){
 
-    }
     render() {
         let {dnd} = this.props.character;
         let actions = this.props.actions;
@@ -377,7 +411,8 @@ class BaseData extends Component {
         return (
             <div className="contentWrapper">
                 {this.renderXpModal()}
-                {GradeUpModal}
+                <GradeUpModal visible={this.state.visible} {...this.props} nowData={this.state.gradeUpProps.nowData} nextData={this.state.gradeUpProps.nextData} grade={this.state.gradeUpProps.grade}
+                              callback={(func)=>{this.onGradeUpModalCallback(func)}} onClose={()=>{this.setState({visible:false})}}/>
                 <Row type="flex" align="middle">
                     <Col span={2} >
                         <p className="label">姓名</p>
@@ -543,6 +578,9 @@ class BaseData extends Component {
                     <Col span={5} >
                         <Stepper value={dnd.basicAttackBonus}
                                  onChange={(v)=>{this.onChangeNum('basicAttackBonus',v)}}></Stepper>
+                    </Col>
+                    <Col span={4} >
+                        <p className="text">{attacData[dnd.basicAttackBonus]}</p>
                     </Col>
                 </Row>
                 {renderWeaponList}
