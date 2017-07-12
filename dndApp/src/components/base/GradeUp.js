@@ -11,6 +11,7 @@ import roleData from '../../asset/RoleData';
 import roleGradeUpData from '../../asset/RoleGradeUpData';
 import xpData from '../../asset/XpData';
 import expertiseData from '../../asset/ExpertiseData';
+import raceData from '../../asset/RaceData';
 import Stepper from '../common/Stepper_ant';
 import {getTotalGrade,getAttrAdjustValue,getAttrFinal} from '../../utli/Common';
 const confirm = Modal.confirm;
@@ -26,6 +27,7 @@ export default class GradeUpModal extends Component{
             func:[{func:this.test,props:{a:'start'}}],//{func:,props:{}}
             chooseRole:0,
             chooseRoleFlag:false,
+            roleGrade:0,
             hp:0,
             hpFlag:false,
             attr:null,
@@ -99,6 +101,10 @@ export default class GradeUpModal extends Component{
                     return {code:1,error};
                 }
                 break;
+            case 4:
+                return  {code:0};
+            case 5:
+                return  {code:0};
         }
         return {code:0};
     }
@@ -130,6 +136,34 @@ export default class GradeUpModal extends Component{
         let v = dnd.hp*1 + hp;
         actions.updateCharacter('hp',v);
     }
+    toAddExpertise = ({list}) =>{
+        let {actions,character:{dnd}} = this.props;
+        let expertiseList = JSON.parse(dnd.expertiseList);
+
+        list.forEach((k,i)=>{
+            let temp = {id:k.id,remarks:'',class:k.class};
+            expertiseList.push(temp);
+        })
+        let v = JSON.stringify(expertiseList);
+        actions.updateCharacter('expertiseList',v);
+    }
+    toAddSpecialSkill =({list,role,grade})=>{
+        let {actions,character:{dnd}} = this.props;
+        let specialSkillList = JSON.parse(dnd.specialSkillList);
+
+        list.forEach((k,i)=>{
+            let temp = {name:k,description:roleData[role]+grade+'级自动添加'};
+            specialSkillList.push(temp);
+        })
+        let v = JSON.stringify(specialSkillList);
+        actions.updateCharacter('specialSkillList',v);
+    }
+    toClearXp =()=>{
+        let {actions,character:{dnd}} = this.props;
+        let v = xpData[this.props.grade+2].xp-1;
+        actions.updateCharacter('xp',v);
+    }
+
 
     todoList(){
         let {dnd} = this.props.character;
@@ -175,6 +209,22 @@ export default class GradeUpModal extends Component{
                     this.setState({hp:0});
                 }
                 break;
+            case 3:
+                if(!this.state.expFlag){
+                    func.push({func:this.toAddExpertise,props:{list:this.state.expList}});
+                }else{
+                    this.setState({expList:[]});
+                }
+                break;
+            case 4:
+                if(roleGradeUpData[this.state.chooseRole].specialSkill[this.state.roleGrade].length>0&&!this.state.chooseRoleFlag){
+                    func.push({func:this.toAddSpecialSkill,props:{list:roleGradeUpData[this.state.chooseRole].specialSkill[this.state.roleGrade],role:this.state.chooseRole,grade:this.state.roleGrade}});
+                }
+                break;
+            case 5:
+                if(xpData[this.props.grade+2].xp<=dnd.xp){
+                    func.push({func:this.toClearXp,props:{}});
+                }
 
         }
         this.setState({func});
@@ -189,6 +239,16 @@ export default class GradeUpModal extends Component{
                 this.todoList();
                 let renderState = this.state.renderState;
                 if(this.state.renderState == 0 ){
+                    let Role = JSON.parse(dnd.role);
+                    let grade = 1;
+                    for(let i = 0;i<Role.length;++i){
+                        let k = Role[i];
+                        if(k.role == this.state.chooseRole){
+                            grade += parseInt(k.grade);
+                            break;
+                        }
+                    }
+                    this.setState({roleGrade:grade});
                     if(nextData.attr){
                         renderState+=1;
                     }else{
@@ -201,16 +261,7 @@ export default class GradeUpModal extends Component{
                         this.state.expNormal = true;
                     }
                     if(this.state.chooseRole==5){
-                        let Role = JSON.parse(dnd.role);
-                        let grade = 1;
-                        for(let i = 0;i<Role.length;++i){
-                            let k = Role[i];
-                            if(k.role == 5){
-                                grade += parseInt(k.grade);
-                                break;
-                            }
-                        }
-                        if(xpData[grade].warriorExp){
+                        if(xpData[this.state.roleGrade].warriorExp){
                             flag = true;
                             this.state.expWar = true;
                         }else{
@@ -218,16 +269,7 @@ export default class GradeUpModal extends Component{
                         }
                     }
                     if(this.state.chooseRole==6){
-                        let Role = JSON.parse(dnd.role);
-                        let grade = 1;
-                        for(let i = 0;i<Role.length;++i){
-                            let k = Role[i];
-                            if(k.role == 6){
-                                grade += parseInt(k.grade);
-                                break;
-                            }
-                        }
-                        if(xpData[grade].monkExp){
+                        if(xpData[this.state.roleGrade].monkExp){
                             flag = true;
                             this.state.expMonk = true;
                         }else{
@@ -235,16 +277,7 @@ export default class GradeUpModal extends Component{
                         }
                     }
                     if(this.state.chooseRole==11){
-                        let Role = JSON.parse(dnd.role);
-                        let grade = 1;
-                        for(let i = 0;i<Role.length;++i){
-                            let k = Role[i];
-                            if(k.role == 11){
-                                grade += parseInt(k.grade);
-                                break;
-                            }
-                        }
-                        if(xpData[grade].magicExp){
+                        if(xpData[this.state.roleGrade].magicExp){
                             flag = true;
                             this.state.expMagic = true;
                         }else{
@@ -305,6 +338,7 @@ export default class GradeUpModal extends Component{
             expList:[],
             expMap:{},
             expFlag:false,
+            roleGrade:0,
         });
         this.modalKey++;
         this.props.onClose();
@@ -341,7 +375,7 @@ export default class GradeUpModal extends Component{
     onChangeExpFlag(v){
         this.setState({expFlag:v})
     }
-    renderExpertiseModal(){
+    renderExpertiseModal(flag){
 
         let data = expertiseData;
         let temp1 = data.common.map((k,i)=>{
@@ -457,6 +491,23 @@ export default class GradeUpModal extends Component{
                 {temp3}
             </div>
         );
+        if (flag){
+            temp = (
+                <div>
+                    <Row type="flex" align="middle">
+                        <Col span={1}/>
+                        <Col span={9}>
+                            <p className="text" ><strong>超魔专长</strong></p>
+                        </Col>
+                        <Col span={9}>
+                            <p className="text" >先决条件</p>
+                        </Col>
+                    </Row>
+                    <div className="littleInterval"></div>
+                    {temp3}
+                </div>
+            );
+        }
 
         return temp;
     }
@@ -620,12 +671,89 @@ export default class GradeUpModal extends Component{
                             </Row>
                         ):null}
                         <div className="littleInterval"></div>
-                        {this.state.expFlag?null: this.renderExpertiseModal()}
+                        {this.state.expFlag?null: this.renderExpertiseModal(!this.state.expNormal&&this.state.expMagic)}
 
                     </div>
                 );
                 break;
+            case 4:
 
+                temp = (
+                    <div>
+                        <Row  type="flex" align="middle">
+                            <Col span={24} >
+                                <p className="text">升级带来的其他变化: </p>
+                            </Col>
+                        </Row>
+                        <div className="littleInterval"></div>
+                        <div className="littleInterval"></div>
+                        <Row  type="flex" align="middle">
+                            <Col span={24} >
+                                <p className="text">基本攻击加值和豁免加值会自动提高 </p>
+                            </Col>
+                        </Row>
+                        <div className="littleInterval"></div>
+                        {this.state.chooseRole==2||this.state.chooseRole==3||this.state.chooseRole==4||this.state.chooseRole==7||this.state.chooseRole==8||this.state.chooseRole==10||this.state.chooseRole==11?(
+                            <Row  type="flex" align="middle">
+                                <Col span={24} >
+                                    <p className="text">每日可使用法术基数自动增加 </p>
+                                </Col>
+                            </Row>
+                        ):null}
+                        <div className="littleInterval"></div>
+                        {roleGradeUpData[this.state.chooseRole].specialSkill[this.state.roleGrade].length>0&&!this.state.chooseRoleFlag?(
+                            <Row  type="flex" align="middle">
+                                <Col span={24} >
+                                    <p className="text">职业特殊能力自动添加：{roleGradeUpData[this.state.chooseRole].specialSkill[this.state.roleGrade].join(' ')} </p>
+                                </Col>
+                            </Row>
+                        ):null}
+
+                        <div className="littleInterval"></div>
+                        {this.state.chooseRoleFlag?(
+                            <Row  type="flex" align="middle">
+                                <Col span={24} >
+                                    <p className="text">未选择职业，默认为野蛮人，同时不自动添加职业特殊能力 </p>
+                                </Col>
+                            </Row>
+                        ):null}
+                    </div>
+                );
+                break;
+
+            case 5:
+
+                temp = (
+                    <div>
+                        <Row  type="flex" align="middle">
+                            <Col span={24} >
+                                <p className="text">您有{roleGradeUpData[this.state.chooseRole].skillPoint+getAttrAdjustValue(dnd,'int')+(dnd.race==0?1:0)}点属性点待分配，本职技能消耗 1点/技能等级，非本职技能消耗 2点/技能等级，暂时请自行计算 </p>
+                            </Col>
+                        </Row>
+                        <div className="littleInterval"></div>
+                        <Row  type="flex" align="middle">
+                            <Col span={24} >
+                                <p className="text">点击前往将跳转至技能页面选择，并结束升级流程，应用升级流程中的所有更改 </p>
+                            </Col>
+                        </Row>
+                        <div className="littleInterval"></div>
+                        {xpData[this.props.grade+2].xp<=dnd.xp?(
+                            <Row  type="flex" align="middle">
+                                <Col span={24} >
+                                    <p className="text"  style={{color:'red'}}><strong>您当前的经验溢出，超过了下一级的升级经验，如果确认升级将会清空超出下一级升级经验的部分，否则请点击取消按钮。</strong></p>
+                                </Col>
+                            </Row>
+                        ):null}
+                        {this.state.chooseRoleFlag?(
+                            <Row  type="flex" align="middle">
+                                <Col span={24} >
+                                    <p className="text">未选择职业，默认为野蛮人，同时不自动添加职业特殊能力 </p>
+                                </Col>
+                            </Row>
+                        ):null}
+                    </div>
+                );
+                break;
         }
 
 

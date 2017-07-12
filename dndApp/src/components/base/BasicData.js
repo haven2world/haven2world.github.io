@@ -11,8 +11,12 @@ import { Menu, Icon, Breadcrumb ,Card ,Modal, Input,InputNumber,Form,Button,Sele
 import {Router, Route, Link, hashHistory,IndexRedirect } from 'react-router';
 import * as CharacterActions from '../../actions/Character';
 import roleData from '../../asset/RoleData';
+import roleGradeUpData from '../../asset/RoleGradeUpData';
 import xpData from '../../asset/XpData';
-import attacData from '../../asset/AttacData';
+import attackData from '../../asset/AttackData';
+import exemptionData from '../../asset/ExemptionData';
+import raceData from '../../asset/RaceData';
+import upGradeData from '../../asset/UpGradeData';
 import Stepper from '../common/Stepper_ant';
 import {getAttrAdjustValue,getAttrFinal,getTotalGrade} from '../../utli/Common';
 import GradeUpModal from './GradeUp';
@@ -120,7 +124,12 @@ class BaseData extends Component {
         this.setState({weaponList});
         this.onChangeWeaponList();
     }
-
+    onGradeUpModalCallback(func){
+        console.log('callback')
+        func.forEach((k,i)=>{
+            k.func(k.props)
+        });
+    }
     handleUpGrade(){
         notification['warning']({
             message: '功能正在开发中',
@@ -155,14 +164,32 @@ class BaseData extends Component {
         });
 
     }
-    onGradeUpModalCallback(func){
-        console.log('callback')
-        func.forEach((k,i)=>{
-           k.func(k.props)
-        });
-    }
     handleGetXp(){
         this.setState({xpModal:true});
+    }
+    getBasicExemption(key,dnd){
+        let result = 0;
+        this.state.role.forEach((k,i)=>{
+            if(exemptionData[k.role]){
+                let cla = exemptionData[k.role][key];
+                for(let ii = 1;ii<=k.grade;++ii){
+                    result += parseInt(upGradeData[ii][cla?'highExe':'lowExe']);
+                }
+            }
+        })
+        return result;
+    }
+    getBasicAttack(){
+        let result = 0;
+        this.state.role.forEach((k,i)=>{
+            if(roleGradeUpData[k.role]){
+                let cla = roleGradeUpData[k.role].attackClass;
+                for(let ii = 1;ii<=k.grade;++ii){
+                    result += parseInt(upGradeData[ii][cla==2?'highAtt':(cla==1?'middleAtt':'lowAtt')]);
+                }
+            }
+        })
+        return result;
     }
     renderXpModal(){
         let {dnd} = this.props.character;
@@ -189,6 +216,14 @@ class BaseData extends Component {
         let {dnd} = this.props.character;
         let actions = this.props.actions;
 
+        //race options
+        let raceOptions = raceData.map((k,i)=>{
+            return(
+                <Option key={i} value={i.toString()}>
+                    {k.name}
+                </Option>
+            )
+        });
         //render role
         let renderRole;
         let roleOptions = roleData.map((k,i)=>{
@@ -211,7 +246,7 @@ class BaseData extends Component {
                                     <a className="text" onClick={()=>{this.onAddRole()}}><Icon type="plus" /></a>
                                 </Col>
                                 <Col span={6} >
-                                    <Select className="input" defaultValue={k.role.toString()} style={{width:'90%'}}
+                                    <Select className="input" value={k.role.toString()} style={{width:'90%'}}
                                             onSelect={(v,o)=>{this.onChangeRoleClass(i,parseInt(v))}}>
                                         {roleOptions}
                                     </Select>
@@ -475,6 +510,26 @@ class BaseData extends Component {
                                 />
                             </Col>
                         </Row>
+                        <div className="littleInterval"></div>
+                        <Row type="flex" align="middle">
+                            <Col span={4} >
+                                <p className="label">种族</p>
+                            </Col>
+                            <Col span={6} >
+                                <Select className="input" value={typeof dnd.race =='undefined'?'0':dnd.race.toString()} style={{width:'100%'}}
+                                        onSelect={(v,o)=>{this.onChangeNum('race',parseInt(v))}}>
+                                    {raceOptions}
+                                </Select>
+                            </Col>
+                            <Col span={2} >
+                            </Col>
+                            <Col span={4} >
+                                <p className="label"> </p>
+                            </Col>
+                            <Col span={6} >
+
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
                 <div className="littleInterval"></div>
@@ -531,39 +586,70 @@ class BaseData extends Component {
                         </Row>
                         <div className="littleInterval"></div>
                         <Row type="flex" align="middle">
-                            <Col span={8} >
-                                <p className="label">强韧豁免</p>
+                            <Col span={4} >
+                                <p className="label">豁免</p>
                             </Col>
-                            <Col span={10} >
-                                <Stepper value={dnd.fortitude}
-                                         onChange={(v)=>{this.onChangeNum('fortitude',v)}}></Stepper>
+                            <Col span={4} >
+                                <p className="label">基数</p>
                             </Col>
                             <Col span={6} >
+                                <p className="label">调整值</p>
                             </Col>
+                            <Col span={10} >
+                                <p className="text">其他调整值</p>
+                            </Col>
+
                         </Row>
                         <div className="littleInterval"></div>
                         <Row type="flex" align="middle">
-                            <Col span={8} >
-                                <p className="label">反射豁免</p>
+                            <Col span={4} >
+                                <p className="label"><strong>强韧</strong></p>
                             </Col>
-                            <Col span={10} >
-                                <Stepper value={dnd.reflex}
-                                         onChange={(v)=>{this.onChangeNum('reflex',v)}}></Stepper>
+                            <Col span={4} >
+                                <p className="label">{this.getBasicExemption(0,dnd)}&nbsp;&nbsp;&nbsp;+</p>
                             </Col>
                             <Col span={6} >
+                                <p className="label">{getAttrAdjustValue(dnd,'con')}&nbsp;&nbsp;&nbsp;+</p>
                             </Col>
+                            <Col span={10} >
+                                <Stepper value={dnd.fortitudeOther}
+                                         onChange={(v)=>{this.onChangeNum('fortitudeOther',v)}}></Stepper>
+                            </Col>
+
                         </Row>
                         <div className="littleInterval"></div>
                         <Row type="flex" align="middle">
-                            <Col span={8} >
-                                <p className="label">意志豁免</p>
+                            <Col span={4} >
+                                <p className="label"><strong>反射</strong></p>
                             </Col>
-                            <Col span={10} >
-                                <Stepper value={dnd.will}
-                                         onChange={(v)=>{this.onChangeNum('will',v)}}></Stepper>
+                            <Col span={4} >
+                                <p className="label">{this.getBasicExemption(1,dnd)}&nbsp;&nbsp;&nbsp;+</p>
                             </Col>
                             <Col span={6} >
+                                <p className="label">{getAttrAdjustValue(dnd,'dex')}&nbsp;&nbsp;&nbsp;+</p>
                             </Col>
+                            <Col span={10} >
+                                <Stepper value={dnd.reflexOther}
+                                         onChange={(v)=>{this.onChangeNum('reflexOther',v)}}></Stepper>
+                            </Col>
+
+                        </Row>
+                        <div className="littleInterval"></div>
+                        <Row type="flex" align="middle">
+                            <Col span={4} >
+                                <p className="label"><strong>意志</strong></p>
+                            </Col>
+                            <Col span={4} >
+                                <p className="label">{this.getBasicExemption(2,dnd)}&nbsp;&nbsp;&nbsp;+</p>
+                            </Col>
+                            <Col span={6} >
+                                <p className="label">{getAttrAdjustValue(dnd,'wis')}&nbsp;&nbsp;&nbsp;+</p>
+                            </Col>
+                            <Col span={10} >
+                                <Stepper value={dnd.willOther}
+                                         onChange={(v)=>{this.onChangeNum('willOther',v)}}></Stepper>
+                            </Col>
+
                         </Row>
                     </Col>
                 </Row>
@@ -576,11 +662,10 @@ class BaseData extends Component {
                         <p className="label">基本攻击加值</p>
                     </Col>
                     <Col span={5} >
-                        <Stepper value={dnd.basicAttackBonus}
-                                 onChange={(v)=>{this.onChangeNum('basicAttackBonus',v)}}></Stepper>
+                        <p className="text">{this.getBasicAttack()}</p>
                     </Col>
                     <Col span={4} >
-                        <p className="text">{attacData[dnd.basicAttackBonus]}</p>
+                        <p className="text">{attackData[this.getBasicAttack()]}</p>
                     </Col>
                 </Row>
                 {renderWeaponList}

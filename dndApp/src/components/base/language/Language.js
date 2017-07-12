@@ -90,14 +90,6 @@ class Language extends Component {
         this.setState({expertiseList});
         this.onChangeExpertiseList();
     }
-    onAddExpertise(){
-        let k = {"name":"通用语"};
-        let expertiseList = this.state.expertiseList;
-        expertiseList.push(k);
-        this.state.expertiseList = expertiseList;
-        this.setState({expertiseList});
-        this.onChangeExpertiseList();
-    }
     onDeleteExpertise(i){
         let expertiseList = this.state.expertiseList;
         expertiseList.splice(i,1);

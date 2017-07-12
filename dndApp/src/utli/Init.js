@@ -6,7 +6,7 @@ export default function initLocalStorage (method=false) {
 
 	dnd.name = "狗蛋";
 	dnd.role = `[{"role":1,"grade":1}]`;
-	dnd.race = 1;
+	dnd.race = 0;
 	dnd.age = 18;
 	dnd.speed = 30;
     dnd.faction = '绝对善良';
@@ -15,9 +15,9 @@ export default function initLocalStorage (method=false) {
 	dnd.hp = 8;
 	dnd.acArmor = 10;
 
-	dnd.fortitude = 0;
-	dnd.reflex = 0;
-	dnd.will = 0;
+	dnd.fortitudeOther = 0;
+	dnd.reflexOther = 0;
+	dnd.willOther = 0;
 
 
 	dnd.str = 10;

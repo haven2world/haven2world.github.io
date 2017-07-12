@@ -79,7 +79,7 @@ class Skill extends Component {
         this.onChangeSpecialSkillList();
     }
     onAddSpecialSkill(){
-        let k = {"name":"无","amount":0,"weight":0};
+        let k = {"name":"无","description":''};
         let specialSkillList = this.state.specialSkillList;
         specialSkillList.push(k);
         this.state.specialSkillList = specialSkillList;
@@ -143,7 +143,7 @@ class Skill extends Component {
             );
         });
         //render specialSkill
-        let rendeSpecialSkill = this.state.specialSkillList.map((k,i)=>{
+        let renderSpecialSkill = this.state.specialSkillList.map((k,i)=>{
 
             return(
               <div key={i}>
@@ -187,7 +187,7 @@ class Skill extends Component {
                         <p className="label">描述</p>
                     </Col>
                 </Row>
-                {rendeSpecialSkill}
+                {renderSpecialSkill}
                 <div className="littleInterval"></div>
                 <Row type="flex" align="middle">
 
