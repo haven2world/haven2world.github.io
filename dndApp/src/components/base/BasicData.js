@@ -131,10 +131,7 @@ class BaseData extends Component {
         });
     }
     handleUpGrade(){
-        notification['warning']({
-            message: '功能正在开发中',
-            description: '升级流程正在开发中，现在请手动调整升级后的属性变化',
-        });
+
         let errorText = '';
         let {dnd} = this.props.character;
         let gradeUpProps = this.state.gradeUpProps;
