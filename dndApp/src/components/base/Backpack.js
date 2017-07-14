@@ -360,7 +360,7 @@ class Backpack extends Component {
                 <Row type="flex" align="middle" >
                     <Col span={2}><p className="label"><strong>背包</strong></p></Col>
                     <Col span={5} ><p className="label">总负重:&nbsp;&nbsp;{getWeight(dnd)}&nbsp;磅</p></Col>
-                    <Col span={5} ><p className="label">{getWeightGrade(dnd).grade}</p></Col>
+                    <Col span={5} ><p className="label">{getWeightGrade(dnd).grade}  上限：{getWeightGrade(dnd).upperLimit}&nbsp;磅</p></Col>
                 </Row>
                 <div className="littleInterval"></div>
                 {renderBackpack}

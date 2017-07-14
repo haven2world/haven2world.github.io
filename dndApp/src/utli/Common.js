@@ -34,13 +34,13 @@ export function getWeightGrade(dnd){
 
 	let relativeData = weightData[str];
 	if(weight<=relativeData[0]){
-		return {grade:'轻度负荷'};
+		return {grade:'轻度负荷',upperLimit:relativeData[0]};
 	}else if(weight<=relativeData[1]){
-		return {grade:'中度负荷'};
+		return {grade:'中度负荷',upperLimit:relativeData[1]};
 	}else if(weight<=relativeData[2]){
-		return {grade:'重度负荷'};
+		return {grade:'重度负荷',upperLimit:relativeData[2]};
 	}else if(weight>relativeData[2]){
-		return {grade:'你背不动'};
+		return {grade:'你背不动',upperLimit:relativeData[2]};
 	}else return {grade:'error'}
 
 }

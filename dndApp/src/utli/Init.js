@@ -27,6 +27,7 @@ export default function initLocalStorage (method=false) {
 	dnd.wis = 10;
 	dnd.cha = 10;
 
+
 	dnd.basicAttackBonus = 0;
 	dnd.weaponList = `[{"name":"木棒","attackBonus":0,"damage":"1d4-1d6","crit":"20 *2","range":10,"feature":"无","arrows":0,"arrowFlag":false,"weight":1}]`;
 	dnd.armorList = '[{"name":"盔甲","armorBonus":1,"maxDexBonus":8,"testImpairment":0,"magicFailure":0.05,"speed":"30 20","weight":10,"feature":"无"},' +
